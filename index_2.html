@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibrahimovic Azka Hafidz Alfik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F9F8;
+    --bg-alt: #EFF4F2;
+    --ink: #12242B;
+    --ink-soft: #4A5C61;
+    --teal: #0E7C7B;
+    --teal-deep: #0A5D5C;
+    --gold: #D9A441;
+    --line: #DDE3E1;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Zilla Slab', serif;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  a { color: var(--teal-deep); }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .nav-mark {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--teal-deep);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--teal-deep);
+    border-color: var(--teal);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+    padding: 32px 32px 88px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    color: var(--teal-deep);
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-nickname {
+    color: var(--teal);
+  }
+
+  .hero-sub {
+    margin-top: 22px;
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+
+  .hero-facts {
+    margin-top: 30px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hero-fact {
+    border-left: 2px solid var(--gold);
+    padding-left: 14px;
+  }
+
+  .hero-fact-label {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .hero-fact-value {
+    font-family: 'Zilla Slab', serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  .hero-photo {
+    position: relative;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .hero-photo-caption {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    background: rgba(18, 36, 43, 0.78);
+    color: var(--white);
+    font-size: 13px;
+    padding: 7px 12px;
+    border-radius: 4px;
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section {
+    padding: 72px 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+    border-top: 1px solid var(--line);
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+
+  .section-head h2 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .section-head p {
+    color: var(--ink-soft);
+    max-width: 34ch;
+    margin: 0;
+  }
+
+  /* ---------- BIO ---------- */
+  .bio-body {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 56px;
+  }
+
+  .bio-text p {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+  }
+
+  .bio-text p:last-child { margin-bottom: 0; }
+
+  .bio-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bio-card {
+    background: var(--bg-alt);
+    border-radius: 6px;
+    padding: 22px 24px;
+  }
+
+  .bio-card-label {
+    font-size: 13px;
+    color: var(--teal-deep);
+    margin-bottom: 6px;
+  }
+
+  .bio-card-value {
+    font-family: 'Zilla Slab', serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .bio-card-note {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  /* ---------- PRESTASI (editorial rows) ---------- */
+  .achievement {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 48px;
+    align-items: center;
+    padding: 48px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .achievement:first-of-type { border-top: none; padding-top: 0; }
+
+  .achievement.reverse {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .achievement.reverse .achievement-photo { order: 2; }
+  .achievement.reverse .achievement-text { order: 1; }
+
+  .achievement-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .achievement-tag {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--teal-deep);
+    background: var(--bg-alt);
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+
+  .achievement-text h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .achievement-text p {
+    color: var(--ink-soft);
+    margin: 12px 0 0;
+    max-width: 42ch;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 32px 48px;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer p {
+    color: var(--ink-soft);
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 760px) {
+    .nav { padding: 20px; }
+    .nav-links { gap: 16px; font-size: 14px; }
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 12px 20px 56px;
+      gap: 36px;
+    }
+    .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
+    .hero h1 { font-size: 38px; }
+    .section { padding: 52px 20px; }
+    .bio-body { grid-template-columns: 1fr; gap: 36px; }
+    .achievement,
+    .achievement.reverse {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+    .achievement.reverse .achievement-photo { order: 0; }
+    .achievement.reverse .achievement-text { order: 1; }
+    .achievement-photo { max-width: 360px; margin: 0 auto; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-mark">Azka</div>
+  <ul class="nav-links">
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#prestasi">Prestasi</a></li>
+    <li><a href="#cita-cita">Cita-cita</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="profil">
+  <div class="hero-intro">
+    <div class="hero-eyebrow">Kelas 6C, UPT SD Negeri Srengat 01</div>
+    <h1>Ibrahimovic Azka<br>Hafidz Alfik<br><span class="hero-nickname">— biasa dipanggil Azka</span></h1>
+    <p class="hero-sub">Suka pelajaran IPA dan MIPA, senang menulis cerpen, dan paling semangat kalau sudah di kolam renang.</p>
+    <div class="hero-facts">
+      <div class="hero-fact">
+        <div class="hero-fact-label">Hobi</div>
+        <div class="hero-fact-value">Renang</div>
+      </div>
+      <div class="hero-fact">
+        <div class="hero-fact-label">Cita-cita</div>
+        <div class="hero-fact-value">Dokter</div>
+      </div>
+      <div class="hero-fact">
+        <div class="hero-fact-label">Pelajaran favorit</div>
+        <div class="hero-fact-value">IPA & MIPA</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="profile.png" alt="Azka memegang piala Juara 1 Brilliant Kids Science">
+    <div class="hero-photo-caption">Juara 1 Brilliant Kids Science, IPA</div>
+  </div>
+</header>
+
+<section class="section" id="prestasi">
+  <div class="section-head">
+    <h2>Prestasi</h2>
+    <p>Beberapa lomba yang pernah Azka ikuti dan menangkan.</p>
+  </div>
+
+  <div class="achievement">
+    <div class="achievement-photo">
+      <img src="juara-bks.png" alt="Azka menerima piala Juara 1 Brilliant Kids Science bidang IPA">
+    </div>
+    <div class="achievement-text">
+      <span class="achievement-tag">Sains</span>
+      <h3>Juara 1 Brilliant Kids Science, bidang IPA se-Jawa Timur</h3>
+      <p>Azka meraih peringkat pertama dalam kompetisi sains tingkat provinsi ini, bersaing dengan peserta dari seluruh Jawa Timur di bidang IPA.</p>
+    </div>
+  </div>
+
+  <div class="achievement reverse">
+    <div class="achievement-photo">
+      <img src="juara-cerpen.png" alt="Azka menerima apresiasi dari kepala sekolah untuk lomba cerpen FLS3N">
+    </div>
+    <div class="achievement-text">
+      <span class="achievement-tag">Menulis</span>
+      <h3>6 besar dan 3 besar FLS3N Cerpen tingkat Kecamatan</h3>
+      <p>Di ajang Festival dan Lomba Seni Siswa Nasional (FLS3N) cabang cerpen, Azka dua kali melaju sebagai finalis: masuk 6 besar, lalu naik ke 3 besar tingkat kecamatan.</p>
+    </div>
+  </div>
+
+  <div class="achievement">
+    <div class="achievement-photo">
+      <img src="juara-mipa.png" alt="Azka memegang sertifikat Juara 2 lomba MIPA tingkat sekolah">
+    </div>
+    <div class="achievement-text">
+      <span class="achievement-tag">Sains & Matematika</span>
+      <h3>Juara 2 lomba MIPA tingkat sekolah</h3>
+      <p>Dalam rangkaian acara Semarak Kemerdekaan di sekolah, Azka meraih Juara 2 kategori MIPA fase C, kelas 6C.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cita-cita">
+  <div class="bio-body">
+    <div class="bio-text">
+      <h2 style="font-size:32px; font-weight:600; margin-bottom:22px;">Tentang Azka</h2>
+      <p>Azka adalah murid kelas 6C di UPT SD Negeri Srengat 01. Ia paling senang saat pelajaran IPA dan MIPA, dan sudah beberapa kali membawa pulang piala dari lomba-lomba sains.</p>
+      <p>Di luar sains, Azka juga suka menulis cerita pendek dan pernah masuk final FLS3N cabang cerpen tingkat kecamatan. Kalau sedang tidak belajar, ia paling suka berenang.</p>
+      <p>Cita-citanya adalah menjadi dokter — jadi rasa suka pada sains sekarang ini juga jadi bekal untuk cita-cita itu nanti.</p>
+    </div>
+    <div class="bio-cards">
+      <div class="bio-card">
+        <div class="bio-card-label">Cita-cita</div>
+        <div class="bio-card-value">Dokter</div>
+        <div class="bio-card-note">Ingin membantu orang lewat ilmu sains yang ditekuni sejak SD.</div>
+      </div>
+      <div class="bio-card">
+        <div class="bio-card-label">Hobi</div>
+        <div class="bio-card-value">Renang</div>
+        <div class="bio-card-note">Cara Azka melepas penat setelah belajar dan lomba.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Ibrahimovic Azka Hafidz Alfik — Kelas 6C, UPT SD Negeri Srengat 01</p>
+  <p>Dibuat dengan bangga oleh Azka sendiri 🏆</p>
+</footer>
+
+</body>
+</html>
