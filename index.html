@@ -50,12 +50,33 @@
 
   /* ---------- NAV ---------- */
   .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 26px 32px;
     max-width: 1080px;
     margin: 0 auto;
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    background: transparent;
+    border: 1px solid transparent;
+  }
+
+  /* Efek Floating Liquid Glass Pill saat di-scroll */
+  .nav.is-scrolled {
+    top: 20px;
+    padding: 12px 28px;
+    max-width: 600px;
+    background: rgba(247, 249, 248, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 32px rgba(18, 36, 43, 0.08);
   }
 
   .nav-mark {
@@ -93,7 +114,7 @@
     grid-template-columns: 1.1fr 0.9fr;
     gap: 56px;
     align-items: center;
-    padding: 32px 32px 88px;
+    padding: 110px 32px 88px; /* Padding atas ditambah agar tidak tertutup header melayang */
     max-width: 1080px;
     margin: 0 auto;
   }
@@ -340,10 +361,16 @@
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 760px) {
     .nav { padding: 20px; }
+    .nav.is-scrolled {
+      top: 16px;
+      padding: 12px 24px;
+      width: calc(100% - 32px);
+      max-width: 400px;
+    }
     .nav-links { gap: 16px; font-size: 14px; }
     .hero {
       grid-template-columns: 1fr;
-      padding: 12px 20px 56px;
+      padding: 100px 20px 56px;
       gap: 36px;
     }
     .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
@@ -370,12 +397,7 @@
     html { scroll-behavior: auto; }
   }
 
-  /* ---------- MOTION: unveiling motif ----------
-     Everything reveals the way an award is unveiled: a photo
-     is uncovered top-to-bottom like slipping it out of a sleeve,
-     and text is "marked in" by a ribbon line that draws itself
-     before the words settle. One motif, reused with intent. */
-
+  /* ---------- MOTION: unveiling motif ---------- */
   .hero-photo img,
   .achievement-photo img {
     clip-path: inset(0 0 100% 0);
@@ -639,7 +661,6 @@
   
   <div class="achievement reverse">
     <div class="achievement-photo">
-      <!-- Menggunakan class img-tabel untuk menyesuaikan gambar berbentuk lanskap -->
       <img src="lolos-osnk.png" class="img-tabel" alt="Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026">
     </div>
     <div class="achievement-text">
@@ -684,6 +705,16 @@
 </footer>
 
 <script>
+  // Script untuk efek Liquid Glass Header saat Scroll
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      nav.classList.add('is-scrolled');
+    } else {
+      nav.classList.remove('is-scrolled');
+    }
+  });
+
   // Page-load reveal: hero unveils once, like opening a certificate.
   requestAnimationFrame(() => {
     document.body.classList.add('loaded');
