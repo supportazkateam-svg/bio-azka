@@ -70,7 +70,7 @@
   .nav.is-scrolled {
     top: 20px;
     padding: 12px 28px;
-    max-width: 600px;
+    max-width: 680px;
     background: rgba(247, 249, 248, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -88,7 +88,7 @@
 
   .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 24px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -114,7 +114,7 @@
     grid-template-columns: 1.1fr 0.9fr;
     gap: 56px;
     align-items: center;
-    padding: 110px 32px 88px; /* Padding atas ditambah agar tidak tertutup header melayang */
+    padding: 110px 32px 88px;
     max-width: 1080px;
     margin: 0 auto;
   }
@@ -219,7 +219,7 @@
     margin: 0;
   }
 
-  /* ---------- BIO ---------- */
+  /* ---------- BIO & TARGET GRID ---------- */
   .bio-body {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
@@ -238,6 +238,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .target-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
   }
 
   .bio-card {
@@ -365,9 +371,9 @@
       top: 16px;
       padding: 12px 24px;
       width: calc(100% - 32px);
-      max-width: 400px;
+      max-width: 450px;
     }
-    .nav-links { gap: 16px; font-size: 14px; }
+    .nav-links { gap: 14px; font-size: 14px; }
     .hero {
       grid-template-columns: 1fr;
       padding: 100px 20px 56px;
@@ -376,7 +382,7 @@
     .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
     .hero h1 { font-size: 38px; }
     .section { padding: 52px 20px; }
-    .bio-body { grid-template-columns: 1fr; gap: 36px; }
+    .bio-body, .target-grid { grid-template-columns: 1fr; gap: 36px; }
     .achievement,
     .achievement.reverse {
       grid-template-columns: 1fr;
@@ -586,6 +592,7 @@
   <ul class="nav-links">
     <li><a href="#profil">Profil</a></li>
     <li><a href="#prestasi">Prestasi</a></li>
+    <li><a href="#target">Targetku</a></li>
     <li><a href="#cita-cita">Cita-cita</a></li>
   </ul>
 </nav>
@@ -670,7 +677,6 @@
     </div>
   </div>
 
-  <!-- Prestasi Baru: Pramuka -->
   <div class="achievement">
     <div class="achievement-photo">
       <img src="juara-pramuka-penggalang.png" alt="Azka berseragam pramuka memegang piala besar Juara 1 Regu Penggalang">
@@ -679,6 +685,26 @@
       <span class="achievement-tag">Pramuka</span>
       <h3>Juara 1 Regu Pramuka Penggalang Terbaik Se-Kota Malang Tahun 2025</h3>
       <p>Bersama reguku, kami berhasil meraih juara pertama sebagai regu pramuka penggalang terbaik se-Kota Malang dan mendapatkan Piala Bergilir Wali Kota Malang berkat kekompakan dan keterampilan kepramukaan yang kami latih bersama.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BAGIAN BARU: TARGET SAAT INI -->
+<section class="section" id="target">
+  <div class="section-head">
+    <h2>Targetku Saat Ini</h2>
+    <p>Fokus belajarku dan kompetisi yang sedang aku perjuangkan selanjutnya.</p>
+  </div>
+  <div class="target-grid">
+    <div class="bio-card">
+      <div class="bio-card-label">Sains / IPA</div>
+      <div class="bio-card-value">Kompetisi Sains Ruangguru (KSR) Tahun 2026</div>
+      <div class="bio-card-note">Sedang memperdalam materi bidang IPA untuk persiapan dan bersaing di ajang nasional Ruangguru.</div>
+    </div>
+    <div class="bio-card">
+      <div class="bio-card-label">Sains / IPA</div>
+      <div class="bio-card-value">OSN IPA - Dies Natalis ke-66 SMP Srengat 01</div>
+      <div class="bio-card-note">Berlatih keras untuk memberikan yang terbaik pada lomba OSN di perayaan ulang tahun sekolah.</div>
     </div>
   </div>
 </section>
