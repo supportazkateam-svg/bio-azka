@@ -290,6 +290,12 @@
     border-radius: 6px;
   }
 
+  .achievement-photo img.img-tabel {
+    aspect-ratio: auto;
+    object-fit: contain;
+    border: 1px solid var(--line);
+  }
+
   .achievement-tag {
     display: inline-block;
     font-size: 13px;
@@ -630,9 +636,11 @@
       <p>Dalam rangkaian acara Semarak Kemerdekaan di sekolah, aku meraih Juara 2 kategori MIPA fase C, kelas 6C.</p>
     </div>
   </div>
+  
   <div class="achievement reverse">
     <div class="achievement-photo">
-      <img src="lolos-osnk.png" alt="Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026">
+      <!-- Menggunakan class img-tabel untuk menyesuaikan gambar berbentuk lanskap -->
+      <img src="lolos-osnk.png" class="img-tabel" alt="Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026">
     </div>
     <div class="achievement-text">
       <span class="achievement-tag">Sains</span>
