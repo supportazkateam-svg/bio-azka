@@ -243,6 +243,25 @@
     margin-top: 4px;
   }
 
+  .bio-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid transparent;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+  }
+
+  .bio-card-link .bio-card-value {
+    color: var(--teal-deep);
+  }
+
+  .bio-card-link:hover,
+  .bio-card-link:focus-visible {
+    background: var(--white);
+    border-color: var(--teal);
+    transform: translateY(-2px);
+  }
+
   /* ---------- PRESTASI (editorial rows) ---------- */
   .achievement {
     display: grid;
@@ -611,6 +630,16 @@
       <p>Dalam rangkaian acara Semarak Kemerdekaan di sekolah, aku meraih Juara 2 kategori MIPA fase C, kelas 6C.</p>
     </div>
   </div>
+  <div class="achievement reverse">
+    <div class="achievement-photo">
+      <img src="lolos-osnk.png" alt="Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026">
+    </div>
+    <div class="achievement-text">
+      <span class="achievement-tag">Sains</span>
+      <h3>Lolos OSN tingkat Kabupaten bidang IPA Tahun 2026</h3>
+      <p>Aku lolos ke tingkat Provinsi dalam Olimpiade Sains Nasional (OSN) bidang IPA tahun 2026.</p>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="cita-cita">
@@ -632,6 +661,11 @@
         <div class="bio-card-value">Renang</div>
         <div class="bio-card-note">Cara aku melepas penat setelah belajar dan ikut lomba.</div>
       </div>
+      <a class="bio-card bio-card-link" href="https://www.instagram.com/azkajuara_?igsi=MTRiM2M2NWNxd2l0" target="_blank" rel="noopener noreferrer">
+        <div class="bio-card-label">Instagram</div>
+        <div class="bio-card-value">@azkajuara_</div>
+        <div class="bio-card-note">Follow buat lihat info dan prestasi terbaru dariku.</div>
+      </a>
     </div>
   </div>
 </section>
