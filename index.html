@@ -278,6 +278,25 @@
     border: 1px solid transparent;
     transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
   }
+  
+  /* Pengaturan spesifik untuk Kartu Gambar IG */
+  .ig-image-card {
+    padding: 0 !important; /* Hilangkan padding agar gambar pas */
+    overflow: hidden;
+    border: 1px solid var(--line) !important;
+    background: var(--white) !important;
+  }
+
+  .ig-image-card::before {
+    display: none !important; /* Hilangkan garis teal samping di gambar */
+  }
+
+  .ig-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
 
   .bio-card-link .bio-card-value {
     color: var(--teal-deep);
@@ -370,7 +389,7 @@
     .nav { padding: 20px 16px; }
     .nav.is-scrolled {
       top: 16px;
-      padding: 12px 16px; /* Padding sisi diperkecil agar tidak menekan menu */
+      padding: 12px 16px; 
       width: calc(100% - 32px);
       max-width: 450px;
     }
@@ -738,11 +757,12 @@
         <div class="bio-card-value">Koding</div>
         <div class="bio-card-note">Kerja sampingan aku setelah lomba dan belajar 😂.</div>
       </div>
-      <a class="bio-card bio-card-link" href="https://www.instagram.com/azkajuara_?igsi=MTRiM2M2NWNxd2l0" target="_blank" rel="noopener noreferrer">
-        <div class="bio-card-label">Instagram</div>
-        <div class="bio-card-value">@azkajuara_</div>
-        <div class="bio-card-note">Follow buat lihat info dan prestasi terbaru dariku.</div>
+      
+      <!-- Tombol Gambar Instagram -->
+      <a class="bio-card bio-card-link ig-image-card" href="https://www.instagram.com/azkajuara_?igsi=MTRiM2M2NWNxd2l0" target="_blank" rel="noopener noreferrer">
+        <img src="akunig-azka.png" alt="Follow Instagram @azkajuara_">
       </a>
+
     </div>
   </div>
 </section>
