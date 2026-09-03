@@ -101,7 +101,7 @@
     border-bottom: 1px solid transparent;
     padding-bottom: 3px;
     transition: border-color 0.2s, color 0.2s;
-    white-space: nowrap; /* Mencegah teks turun ke baris baru */
+    white-space: nowrap;
   }
 
   .nav-links a:hover {
@@ -271,42 +271,45 @@
     margin-top: 4px;
   }
 
-  .bio-card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid transparent;
-    transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+  /* ---------- INSTAGRAM CTA SECTION ---------- */
+  .ig-cta {
+    margin-top: 72px;
+    padding-top: 56px;
+    border-top: 1px solid var(--line);
+    text-align: center;
   }
-  
-  /* Pengaturan spesifik untuk Kartu Gambar IG */
-  .ig-image-card {
-    padding: 0 !important; /* Hilangkan padding agar gambar pas */
+
+  .ig-cta p {
+    max-width: 65ch;
+    margin: 0 auto 32px;
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  .ig-banner-link {
+    display: inline-block;
+    max-width: 520px;
+    width: 100%;
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid var(--line) !important;
-    background: var(--white) !important;
+    border: 1px solid var(--line);
+    background: var(--white);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
-  .ig-image-card::before {
-    display: none !important; /* Hilangkan garis teal samping di gambar */
-  }
-
-  .ig-image-card img {
+  .ig-banner-link img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
-    object-fit: cover;
+    object-fit: contain;
   }
 
-  .bio-card-link .bio-card-value {
-    color: var(--teal-deep);
-  }
-
-  .bio-card-link:hover,
-  .bio-card-link:focus-visible {
-    background: var(--white);
+  .ig-banner-link:hover,
+  .ig-banner-link:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(18, 36, 43, 0.08);
     border-color: var(--teal);
-    transform: translateY(-2px);
   }
 
   /* ---------- PRESTASI (editorial rows) ---------- */
@@ -404,6 +407,10 @@
     .hero h1 { font-size: 38px; }
     .section { padding: 52px 20px; }
     .bio-body, .target-grid { grid-template-columns: 1fr; gap: 36px; }
+    
+    .ig-cta { margin-top: 48px; padding-top: 40px; }
+    .ig-cta p { font-size: 16px; }
+
     .achievement,
     .achievement.reverse {
       grid-template-columns: 1fr;
@@ -415,7 +422,6 @@
     footer { flex-direction: column; align-items: flex-start; }
   }
 
-  /* Responsif Khusus Layar HP Sangat Sempit (Android Kecil) */
   @media (max-width: 400px) {
     .nav.is-scrolled {
       padding: 10px 12px; 
@@ -563,9 +569,8 @@
   .achievement.is-visible .achievement-text h3 { transition-delay: 0.33s; }
   .achievement.is-visible .achievement-text p { transition-delay: 0.41s; }
 
-  .bio-card {
+  .bio-card, .ig-cta {
     position: relative;
-    overflow: hidden;
   }
 
   .bio-card::before {
@@ -581,14 +586,14 @@
     transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .bio-card > * {
+  .bio-card > *, .ig-cta {
     opacity: 0;
     transform: translateY(8px);
     transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
   }
 
   .bio-card.is-visible::before { transform: scaleY(1); }
-  .bio-card.is-visible > * { opacity: 1; transform: translateY(0); }
+  .bio-card.is-visible > *, .ig-cta.is-visible { opacity: 1; transform: translateY(0); }
 
   .section-head h2 {
     opacity: 0;
@@ -606,7 +611,7 @@
     .hero-photo-caption, .hero-eyebrow, .hero-sub,
     .hero-line span, .hero-fact, .hero-fact::before,
     .achievement-text::before, .achievement-text > *,
-    .bio-card::before, .bio-card > *, .section-head h2 {
+    .bio-card::before, .bio-card > *, .section-head h2, .ig-cta {
       transition: none !important;
       opacity: 1 !important;
       transform: none !important;
@@ -757,13 +762,15 @@
         <div class="bio-card-value">Koding</div>
         <div class="bio-card-note">Kerja sampingan aku setelah lomba dan belajar 😂.</div>
       </div>
-      
-      <!-- Tombol Gambar Instagram -->
-      <a class="bio-card bio-card-link ig-image-card" href="https://www.instagram.com/azkajuara_?igsi=MTRiM2M2NWNxd2l0" target="_blank" rel="noopener noreferrer">
-        <img src="akunig-azka.png" alt="Follow Instagram @azkajuara_">
-      </a>
-
     </div>
+  </div>
+
+  <!-- BAGIAN BARU: INSTAGRAM CTA -->
+  <div class="ig-cta">
+    <p>Mau tau lebih lanjut tentang aku dan prestasi yang aku raih? atau sekedar ingin chat personal? Jangan lupa mampir akun Instagram ku dibawah ya!</p>
+    <a class="ig-banner-link" href="https://www.instagram.com/azkajuara_?igsi=MTRiM2M2NWNxd2l0" target="_blank" rel="noopener noreferrer">
+      <img src="akunig-azka.png" alt="Follow Instagram @azkajuara_">
+    </a>
   </div>
 </section>
 
@@ -791,7 +798,7 @@
 
   // Scroll reveal: same unveiling motif, triggered once per element.
   const revealTargets = document.querySelectorAll(
-    '.achievement, .bio-card, .section-head'
+    '.achievement, .bio-card, .section-head, .ig-cta'
   );
 
   if ('IntersectionObserver' in window) {
