@@ -289,10 +289,9 @@
 
   .ig-banner-link {
     display: inline-block;
-    max-width: 480px; /* Lebar maksimal tombol */
+    max-width: 480px; 
     width: 100%;
-    height: 86px; /* Kunci tingginya agar memotong kotak putih berlebih */
-    border-radius: 100px; /* Pastikan pinggirannya selalu membulat (kapsul) */
+    border-radius: 100px; 
     overflow: hidden;
     border: 1px solid var(--line);
     background: var(--white);
@@ -303,9 +302,7 @@
   .ig-banner-link img {
     display: block;
     width: 100%;
-    height: 100%; /* Penuhi tinggi yang sudah dikunci (86px) */
-    object-fit: cover; /* CSS memotong/zoom gambar otomatis di tengah */
-    object-position: center; 
+    height: auto; /* Gambar akan menyesuaikan proporsi aslinya secara natural */
   }
 
   .ig-banner-link:hover,
@@ -413,10 +410,6 @@
     
     .ig-cta { margin-top: 48px; padding-top: 40px; }
     .ig-cta p { font-size: 16px; }
-    
-    .ig-banner-link {
-      height: 72px; /* Perkecil tinggi kapsul saat di HP */
-    }
 
     .achievement,
     .achievement.reverse {
