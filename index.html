@@ -3,15 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biografi - Ibrahimovic Azka Hafidz Alfik</title>
   
-  <!-- SEO & Social Sharing Meta Tags -->
+  <!-- Judul Halaman -->
+  <title>Biografi - Ibrahimovic Azka Hafidz Alfik | AzkaBlog</title>
+  
+  <!-- SEO & Google Site Name -->
   <meta name="description" content="Biografi dan catatan prestasi Ibrahimovic Azka Hafidz Alfik, siswa berprestasi di bidang Sains (IPA), menulis cerpen, dan kepramukaan.">
+  <meta name="application-name" content="AzkaBlog">
   <meta name="theme-color" content="#F7F9F8">
+  <link rel="canonical" href="https://www.azkablog.my.id/">
+
+  <!-- Favicon (Ikon di samping URL pencarian Google) -->
+  <link rel="icon" type="image/png" href="profile.png">
+  <link rel="apple-touch-icon" href="profile.png">
+
+  <!-- Open Graph / WhatsApp / Facebook / Telegram -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Biografi - Ibrahimovic Azka Hafidz Alfik">
+  <meta property="og:site_name" content="AzkaBlog">
+  <meta property="og:url" content="https://www.azkablog.my.id/">
+  <meta property="og:title" content="Biografi - Ibrahimovic Azka Hafidz Alfik | AzkaBlog">
   <meta property="og:description" content="Siswa UPT SD Negeri Srengat 01. Menyukai Sains (IPA), cerpen, dan koding.">
-  <meta property="og:image" content="profile.png">
+  <meta property="og:image" content="https://www.azkablog.my.id/profile.png">
+
+  <!-- Structured Data JSON-LD (Standar Resmi Google untuk Memunculkan Nama 'AzkaBlog') -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AzkaBlog",
+    "alternateName": ["Azka Blog", "azkablog"],
+    "url": "https://www.azkablog.my.id/"
+  }
+  </script>
 
   <!-- Progressive Enhancement: tandai ketersediaan JavaScript -->
   <script>document.documentElement.classList.add('js');</script>
@@ -38,7 +61,7 @@
 
     html {
       scroll-behavior: smooth;
-      /* Mencegah konten tertutup oleh floating navbar saat anchor link diklik */
+      /* Mencegah konten tertutup oleh floating navbar saat link menu diklik */
       scroll-padding-top: 90px;
     }
 
@@ -733,7 +756,7 @@
     </div>
   </div>
   <div class="hero-photo" id="hero-photo">
-    <!-- fetchpriority="high" untuk LCP yang lebih cepat -->
+    <!-- fetchpriority="high" untuk pemuatan gambar utama lebih cepat -->
     <img src="profile.png" alt="Azka memegang piala Juara 1 Brilliant Kids Science" fetchpriority="high">
     <div class="hero-photo-caption">Juara 1 Brilliant Kids Science (BKS) IPA</div>
   </div>
