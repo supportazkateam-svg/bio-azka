@@ -1,620 +1,705 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biografi - Ibrahimovic Azka Hafidz Alfik</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #F7F9F8;
-    --bg-alt: #EFF4F2;
-    --ink: #12242B;
-    --ink-soft: #4A5C61;
-    --teal: #0E7C7B;
-    --teal-deep: #0A5D5C;
-    --gold: #D9A441;
-    --line: #DDE3E1;
-    --white: #FFFFFF;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biografi - Ibrahimovic Azka Hafidz Alfik</title>
+  
+  <!-- SEO & Social Sharing Meta Tags -->
+  <meta name="description" content="Biografi dan catatan prestasi Ibrahimovic Azka Hafidz Alfik, siswa berprestasi di bidang Sains (IPA), menulis cerpen, dan kepramukaan.">
+  <meta name="theme-color" content="#F7F9F8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Biografi - Ibrahimovic Azka Hafidz Alfik">
+  <meta property="og:description" content="Siswa UPT SD Negeri Srengat 01. Menyukai Sains (IPA), cerpen, dan koding.">
+  <meta property="og:image" content="profile.png">
 
-  * { box-sizing: border-box; }
+  <!-- Progressive Enhancement: tandai ketersediaan JavaScript -->
+  <script>document.documentElement.classList.add('js');</script>
 
-  html { scroll-behavior: smooth; }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Zilla Slab', serif;
-    margin: 0;
-    color: var(--ink);
-  }
-
-  a { color: var(--teal-deep); }
-
-  .wrap {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
-
-  /* ---------- NAV ---------- */
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 26px 32px;
-    max-width: 1080px;
-    margin: 0 auto;
-    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    background: transparent;
-    border: 1px solid transparent;
-  }
-
-  /* Efek Floating Liquid Glass Pill saat di-scroll */
-  .nav.is-scrolled {
-    top: 20px;
-    padding: 12px 28px;
-    max-width: 680px;
-    background: rgba(247, 249, 248, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 100px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 10px 32px rgba(18, 36, 43, 0.08);
-  }
-
-  .nav-mark {
-    font-family: 'Zilla Slab', serif;
-    font-weight: 600;
-    font-size: 19px;
-    color: var(--teal-deep);
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 15px;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: var(--ink-soft);
-    border-bottom: 1px solid transparent;
-    padding-bottom: 3px;
-    transition: border-color 0.2s, color 0.2s;
-    white-space: nowrap;
-  }
-
-  .nav-links a:hover {
-    color: var(--teal-deep);
-    border-color: var(--teal);
-  }
-
-  /* ---------- HERO ---------- */
-  .hero {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 56px;
-    align-items: center;
-    padding: 110px 32px 88px;
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-
-  .hero-eyebrow {
-    color: var(--teal-deep);
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-
-  .hero h1 {
-    font-size: 52px;
-    line-height: 1.08;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-
-  .hero-nickname {
-    color: var(--teal);
-  }
-
-  .hero-sub {
-    margin-top: 22px;
-    font-size: 18px;
-    color: var(--ink-soft);
-    max-width: 46ch;
-  }
-
-  .hero-facts {
-    margin-top: 30px;
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-
-  .hero-fact {
-    border-left: 2px solid var(--gold);
-    padding-left: 14px;
-  }
-
-  .hero-fact-label {
-    font-size: 13px;
-    color: var(--ink-soft);
-  }
-
-  .hero-fact-value {
-    font-family: 'Zilla Slab', serif;
-    font-size: 17px;
-    font-weight: 600;
-    margin-top: 2px;
-  }
-
-  .hero-photo {
-    position: relative;
-  }
-
-  .hero-photo img {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center 20%;
-    display: block;
-    border-radius: 6px;
-  }
-
-  .hero-photo-caption {
-    position: absolute;
-    left: 16px;
-    bottom: 16px;
-    background: rgba(18, 36, 43, 0.78);
-    color: var(--white);
-    font-size: 13px;
-    padding: 7px 12px;
-    border-radius: 4px;
-  }
-
-  /* ---------- SECTION HEADERS ---------- */
-  .section {
-    padding: 72px 32px;
-    max-width: 1080px;
-    margin: 0 auto;
-    border-top: 1px solid var(--line);
-  }
-
-  .section-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 24px;
-    margin-bottom: 48px;
-    flex-wrap: wrap;
-  }
-
-  .section-head h2 {
-    font-size: 32px;
-    font-weight: 600;
-  }
-
-  .section-head p {
-    color: var(--ink-soft);
-    max-width: 34ch;
-    margin: 0;
-  }
-
-  /* ---------- BIO & TARGET GRID ---------- */
-  .bio-body {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 56px;
-  }
-
-  .bio-text p {
-    font-size: 18px;
-    color: var(--ink-soft);
-    margin: 0 0 18px;
-  }
-
-  .bio-text p:last-child { margin-bottom: 0; }
-
-  .bio-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .target-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  .bio-card {
-    background: var(--bg-alt);
-    border-radius: 6px;
-    padding: 22px 24px;
-  }
-
-  .bio-card-label {
-    font-size: 13px;
-    color: var(--teal-deep);
-    margin-bottom: 6px;
-  }
-
-  .bio-card-value {
-    font-family: 'Zilla Slab', serif;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  .bio-card-note {
-    font-size: 14px;
-    color: var(--ink-soft);
-    margin-top: 4px;
-  }
-
-  /* ---------- INSTAGRAM CTA SECTION ---------- */
-  .ig-cta {
-    margin-top: 72px;
-    padding-top: 56px;
-    border-top: 1px solid var(--line);
-    text-align: center;
-  }
-
-  .ig-cta p {
-    max-width: 65ch;
-    margin: 0 auto 28px;
-    font-size: 18px;
-    color: var(--ink);
-    line-height: 1.6;
-  }
-
-  .ig-banner-link {
-    display: inline-block;
-    max-width: 480px; 
-    width: 100%;
-    border-radius: 100px; 
-    overflow: hidden;
-    border: 1px solid var(--line);
-    background: var(--white);
-    box-shadow: 0 6px 20px rgba(18, 36, 43, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  }
-
-  .ig-banner-link img {
-    display: block;
-    width: 100%;
-    height: auto; /* Gambar akan menyesuaikan proporsi aslinya secara natural */
-  }
-
-  .ig-banner-link:hover,
-  .ig-banner-link:focus-visible {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(18, 36, 43, 0.08);
-    border-color: var(--teal);
-  }
-
-  /* ---------- PRESTASI (editorial rows) ---------- */
-  .achievement {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 48px;
-    align-items: center;
-    padding: 48px 0;
-    border-top: 1px solid var(--line);
-  }
-
-  .achievement:first-of-type { border-top: none; padding-top: 0; }
-
-  .achievement.reverse {
-    grid-template-columns: 1.15fr 0.85fr;
-  }
-
-  .achievement.reverse .achievement-photo { order: 2; }
-  .achievement.reverse .achievement-text { order: 1; }
-
-  .achievement-photo img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    object-position: center 25%;
-    display: block;
-    border-radius: 6px;
-  }
-
-  .achievement-photo img.img-tabel {
-    aspect-ratio: auto;
-    object-fit: contain;
-    border: 1px solid var(--line);
-  }
-
-  .achievement-tag {
-    display: inline-block;
-    font-size: 13px;
-    color: var(--teal-deep);
-    background: var(--bg-alt);
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin-bottom: 14px;
-  }
-
-  .achievement-text h3 {
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 1.3;
-  }
-
-  .achievement-text p {
-    color: var(--ink-soft);
-    margin: 12px 0 0;
-    max-width: 42ch;
-  }
-
-  /* ---------- FOOTER ---------- */
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 40px 32px 48px;
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  footer p {
-    color: var(--ink-soft);
-    font-size: 14px;
-    margin: 0;
-  }
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 760px) {
-    .nav { padding: 20px 16px; }
-    .nav.is-scrolled {
-      top: 16px;
-      padding: 12px 16px; 
-      width: calc(100% - 32px);
-      max-width: 450px;
+  <style>
+    :root {
+      --bg: #F7F9F8;
+      --bg-alt: #EFF4F2;
+      --ink: #12242B;
+      --ink-soft: #4A5C61;
+      --teal: #0E7C7B;
+      --teal-deep: #0A5D5C;
+      --gold: #D9A441;
+      --line: #DDE3E1;
+      --white: #FFFFFF;
     }
-    .nav-mark { font-size: 17px; }
-    .nav-links { gap: 12px; font-size: 13px; }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      /* Mencegah konten tertutup oleh floating navbar saat anchor link diklik */
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Zilla Slab', serif;
+      margin: 0;
+      color: var(--ink);
+    }
+
+    a { color: var(--teal-deep); }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ---------- NAV ---------- */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 26px 32px;
+      max-width: 1080px;
+      margin: 0 auto;
+      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      background: transparent;
+      border: 1px solid transparent;
+    }
+
+    /* Efek Floating Liquid Glass Pill saat di-scroll */
+    .nav.is-scrolled {
+      top: 20px;
+      padding: 12px 28px;
+      max-width: 680px;
+      background: rgba(247, 249, 248, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 10px 32px rgba(18, 36, 43, 0.08);
+    }
+
+    .nav-mark {
+      font-family: 'Zilla Slab', serif;
+      font-weight: 600;
+      font-size: 19px;
+      color: var(--teal-deep);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-mark:hover {
+      opacity: 0.8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 3px;
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal-deep);
+      border-color: var(--teal);
+    }
+
+    /* ---------- HERO ---------- */
     .hero {
-      grid-template-columns: 1fr;
-      padding: 100px 20px 56px;
-      gap: 36px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+      padding: 110px 32px 88px;
+      max-width: 1080px;
+      margin: 0 auto;
     }
-    .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
-    .hero h1 { font-size: 38px; }
-    .section { padding: 52px 20px; }
-    .bio-body, .target-grid { grid-template-columns: 1fr; gap: 36px; }
-    
-    .ig-cta { margin-top: 48px; padding-top: 40px; }
-    .ig-cta p { font-size: 16px; }
 
-    .achievement,
+    .hero-eyebrow {
+      color: var(--teal-deep);
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-nickname {
+      color: var(--teal);
+    }
+
+    .hero-sub {
+      margin-top: 22px;
+      font-size: 18px;
+      color: var(--ink-soft);
+      max-width: 46ch;
+    }
+
+    .hero-facts {
+      margin-top: 30px;
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero-fact {
+      border-left: 2px solid var(--gold);
+      padding-left: 14px;
+    }
+
+    .hero-fact-label {
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    .hero-fact-value {
+      font-family: 'Zilla Slab', serif;
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .hero-photo {
+      position: relative;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .hero-photo-caption {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      background: rgba(18, 36, 43, 0.78);
+      color: var(--white);
+      font-size: 13px;
+      padding: 7px 12px;
+      border-radius: 4px;
+    }
+
+    /* ---------- SECTION HEADERS ---------- */
+    .section {
+      padding: 72px 32px;
+      max-width: 1080px;
+      margin: 0 auto;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      max-width: 34ch;
+      margin: 0;
+    }
+
+    /* ---------- BIO & TARGET GRID ---------- */
+    .bio-body {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 56px;
+    }
+
+    .bio-text p {
+      font-size: 18px;
+      color: var(--ink-soft);
+      margin: 0 0 18px;
+    }
+
+    .bio-text p:last-child { margin-bottom: 0; }
+
+    .bio-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .target-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .bio-card {
+      background: var(--bg-alt);
+      border-radius: 6px;
+      padding: 22px 24px;
+    }
+
+    .bio-card-label {
+      font-size: 13px;
+      color: var(--teal-deep);
+      margin-bottom: 6px;
+    }
+
+    .bio-card-value {
+      font-family: 'Zilla Slab', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .bio-card-note {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin-top: 4px;
+    }
+
+    /* ---------- INSTAGRAM CTA SECTION ---------- */
+    .ig-cta {
+      margin-top: 72px;
+      padding-top: 56px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .ig-cta p {
+      max-width: 65ch;
+      margin: 0 auto 28px;
+      font-size: 18px;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .ig-banner-link {
+      display: inline-block;
+      max-width: 480px; 
+      width: 100%;
+      border-radius: 100px; 
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: 0 6px 20px rgba(18, 36, 43, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .ig-banner-link img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .ig-banner-link:hover,
+    .ig-banner-link:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(18, 36, 43, 0.08);
+      border-color: var(--teal);
+    }
+
+    /* ---------- PRESTASI (editorial rows) ---------- */
+    .achievement {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 48px;
+      align-items: center;
+      padding: 48px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .achievement:first-of-type { border-top: none; padding-top: 0; }
+
     .achievement.reverse {
-      grid-template-columns: 1fr;
-      gap: 22px;
+      grid-template-columns: 1.15fr 0.85fr;
     }
-    .achievement.reverse .achievement-photo { order: 0; }
+
+    .achievement.reverse .achievement-photo { order: 2; }
     .achievement.reverse .achievement-text { order: 1; }
-    .achievement-photo { max-width: 360px; margin: 0 auto; }
-    footer { flex-direction: column; align-items: flex-start; }
-  }
 
-  @media (max-width: 400px) {
-    .nav.is-scrolled {
-      padding: 10px 12px; 
+    .achievement-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+      border-radius: 6px;
     }
-    .nav-mark { font-size: 15px; }
-    .nav-links { gap: 8px; font-size: 12px; }
-  }
 
-  :focus-visible {
-    outline: 2px solid var(--teal);
-    outline-offset: 2px;
-  }
+    .achievement-photo img.img-tabel {
+      aspect-ratio: auto;
+      object-fit: contain;
+      border: 1px solid var(--line);
+    }
 
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
+    .achievement-tag {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--teal-deep);
+      background: var(--bg-alt);
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
 
-  /* ---------- MOTION: unveiling motif ---------- */
-  .hero-photo img,
-  .achievement-photo img {
-    clip-path: inset(0 0 100% 0);
-    transform: scale(1.05);
-    transition: clip-path 1s cubic-bezier(0.22, 1, 0.36, 1),
-                transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
-  }
+    .achievement-text h3 {
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
 
-  .hero-photo.is-revealed img,
-  .achievement.is-visible .achievement-photo img {
-    clip-path: inset(0 0 0% 0);
-    transform: scale(1);
-  }
+    .achievement-text p {
+      color: var(--ink-soft);
+      margin: 12px 0 0;
+      max-width: 42ch;
+    }
 
-  .hero-photo-caption {
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 0.5s ease 0.7s, transform 0.5s ease 0.7s;
-  }
+    /* ---------- FOOTER ---------- */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 40px 32px 48px;
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-  .hero-photo.is-revealed .hero-photo-caption {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    footer p {
+      color: var(--ink-soft);
+      font-size: 14px;
+      margin: 0;
+    }
 
-  .hero-eyebrow,
-  .hero-sub {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 760px) {
+      .nav { padding: 20px 16px; }
+      .nav.is-scrolled {
+        top: 16px;
+        padding: 12px 16px; 
+        width: calc(100% - 32px);
+        max-width: 450px;
+      }
+      .nav-mark { font-size: 17px; }
+      .nav-links { gap: 12px; font-size: 13px; }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 100px 20px 56px;
+        gap: 36px;
+      }
+      .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
+      .hero h1 { font-size: 38px; }
+      .section { padding: 52px 20px; }
+      .bio-body, .target-grid { grid-template-columns: 1fr; gap: 36px; }
+      
+      .ig-cta { margin-top: 48px; padding-top: 40px; }
+      .ig-cta p { font-size: 16px; }
 
-  body.loaded .hero-eyebrow {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.05s;
-  }
+      .achievement,
+      .achievement.reverse {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+      .achievement.reverse .achievement-photo { order: 0; }
+      .achievement.reverse .achievement-text { order: 1; }
+      .achievement-photo { max-width: 360px; margin: 0 auto; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
 
-  body.loaded .hero-sub {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.55s;
-  }
+    @media (max-width: 400px) {
+      .nav.is-scrolled {
+        padding: 10px 12px; 
+      }
+      .nav-mark { font-size: 15px; }
+      .nav-links { gap: 8px; font-size: 12px; }
+    }
 
-  .hero-line {
-    display: block;
-    overflow: hidden;
-    line-height: 1.08;
-  }
+    :focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 2px;
+    }
 
-  .hero-line span {
-    display: block;
-    transform: translateY(105%);
-    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  }
+    /* ---------- MOTION: Progressive Unveiling (Hanya saat JS aktif) ---------- */
+    .hero-photo img,
+    .achievement-photo img {
+      transition: clip-path 1s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
 
-  body.loaded .hero-line:nth-child(1) span { transition-delay: 0.15s; }
-  body.loaded .hero-line:nth-child(2) span { transition-delay: 0.25s; }
-  body.loaded .hero-line:nth-child(3) span { transition-delay: 0.35s; }
+    .js .hero-photo img,
+    .js .achievement-photo img {
+      clip-path: inset(0 0 100% 0);
+      transform: scale(1.05);
+    }
 
-  body.loaded .hero-line span {
-    transform: translateY(0);
-  }
+    .hero-photo.is-revealed img,
+    .achievement.is-visible .achievement-photo img {
+      clip-path: inset(0 0 0% 0);
+      transform: scale(1);
+    }
 
-  .hero-fact {
-    opacity: 0;
-    transition: opacity 0.4s ease 0.75s;
-  }
+    .hero-photo-caption {
+      transition: opacity 0.5s ease 0.7s, transform 0.5s ease 0.7s;
+    }
 
-  .hero-fact::before {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 100%;
-    margin-bottom: 8px;
-    background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-  }
+    .js .hero-photo-caption {
+      opacity: 0;
+      transform: translateY(6px);
+    }
 
-  .hero-fact {
-    border-left: none;
-    padding-left: 0;
-    min-width: 96px;
-  }
+    .hero-photo.is-revealed .hero-photo-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-  body.loaded .hero-fact { opacity: 1; }
-  body.loaded .hero-fact:nth-child(1)::before { transition-delay: 0.75s; transform: scaleX(1); }
-  body.loaded .hero-fact:nth-child(2)::before { transition-delay: 0.87s; transform: scaleX(1); }
-  body.loaded .hero-fact:nth-child(3)::before { transition-delay: 0.99s; transform: scaleX(1); }
+    .hero-eyebrow,
+    .hero-sub {
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
 
-  .achievement-text {
-    position: relative;
-    padding-left: 22px;
-  }
+    .js .hero-eyebrow,
+    .js .hero-sub {
+      opacity: 0;
+      transform: translateY(10px);
+    }
 
-  .achievement-text::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
-    bottom: 4px;
-    width: 2px;
-    background: var(--gold);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
+    body.loaded .hero-eyebrow {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.05s;
+    }
 
-  .achievement-text > * {
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.55s ease, transform 0.55s ease;
-  }
+    body.loaded .hero-sub {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.55s;
+    }
 
-  .achievement.is-visible .achievement-text::before {
-    transform: scaleY(1);
-  }
+    .hero-line {
+      display: block;
+      overflow: hidden;
+      line-height: 1.08;
+    }
 
-  .achievement.is-visible .achievement-text > * {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    .hero-line span {
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
 
-  .achievement.is-visible .achievement-text .achievement-tag { transition-delay: 0.25s; }
-  .achievement.is-visible .achievement-text h3 { transition-delay: 0.33s; }
-  .achievement.is-visible .achievement-text p { transition-delay: 0.41s; }
+    .js .hero-line span {
+      transform: translateY(105%);
+    }
 
-  .bio-card, .ig-cta {
-    position: relative;
-  }
+    body.loaded .hero-line:nth-child(1) span { transition-delay: 0.15s; }
+    body.loaded .hero-line:nth-child(2) span { transition-delay: 0.25s; }
+    body.loaded .hero-line:nth-child(3) span { transition-delay: 0.35s; }
 
-  .bio-card::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: var(--teal);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
+    body.loaded .hero-line span {
+      transform: translateY(0);
+    }
 
-  .bio-card > *, .ig-cta {
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
-  }
+    .hero-fact {
+      transition: opacity 0.4s ease 0.75s;
+      border-left: none;
+      padding-left: 0;
+      min-width: 96px;
+    }
 
-  .bio-card.is-visible::before { transform: scaleY(1); }
-  .bio-card.is-visible > *, .ig-cta.is-visible { opacity: 1; transform: translateY(0); }
+    .js .hero-fact {
+      opacity: 0;
+    }
 
-  .section-head h2 {
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
+    .hero-fact::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      margin-bottom: 8px;
+      background: var(--gold);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
 
-  .section-head.is-visible h2 {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    .js .hero-fact::before {
+      transform: scaleX(0);
+    }
 
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
-</style>
+    body.loaded .hero-fact { opacity: 1; }
+    body.loaded .hero-fact:nth-child(1)::before { transition-delay: 0.75s; transform: scaleX(1); }
+    body.loaded .hero-fact:nth-child(2)::before { transition-delay: 0.87s; transform: scaleX(1); }
+    body.loaded .hero-fact:nth-child(3)::before { transition-delay: 0.99s; transform: scaleX(1); }
+
+    .achievement-text {
+      position: relative;
+      padding-left: 22px;
+    }
+
+    .achievement-text::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--gold);
+      transform-origin: top;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .js .achievement-text::before {
+      transform: scaleY(0);
+    }
+
+    .achievement-text > * {
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .js .achievement-text > * {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .achievement.is-visible .achievement-text::before {
+      transform: scaleY(1);
+    }
+
+    .achievement.is-visible .achievement-text > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .achievement.is-visible .achievement-text .achievement-tag { transition-delay: 0.25s; }
+    .achievement.is-visible .achievement-text h3 { transition-delay: 0.33s; }
+    .achievement.is-visible .achievement-text p { transition-delay: 0.41s; }
+
+    .bio-card, .ig-cta {
+      position: relative;
+    }
+
+    .bio-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--teal);
+      transform-origin: top;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .js .bio-card::before {
+      transform: scaleY(0);
+    }
+
+    .bio-card > *, .ig-cta {
+      transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
+    }
+
+    .js .bio-card > *, 
+    .js .ig-cta {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .bio-card.is-visible::before { transform: scaleY(1); }
+    .bio-card.is-visible > *, .ig-cta.is-visible { opacity: 1; transform: translateY(0); }
+
+    .section-head h2 {
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .js .section-head h2 {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .section-head.is-visible h2 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- PREFERS REDUCED MOTION (Aksesibilitas Pengguna) ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .js .hero-photo img,
+      .js .achievement-photo img {
+        clip-path: none !important;
+        transform: none !important;
+      }
+      .js .hero-eyebrow,
+      .js .hero-sub,
+      .js .hero-fact,
+      .js .hero-line span,
+      .js .section-head h2,
+      .js .bio-card > *,
+      .js .ig-cta,
+      .js .achievement-text > *,
+      .js .hero-photo-caption {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .js .hero-fact::before,
+      .js .achievement-text::before,
+      .js .bio-card::before {
+        transform: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-mark">Azka</div>
+<nav class="nav" aria-label="Navigasi Utama">
+  <a href="#profil" class="nav-mark" aria-label="Kembali ke atas">Azka</a>
   <ul class="nav-links">
     <li><a href="#profil">Profil</a></li>
     <li><a href="#prestasi">Prestasi</a></li>
@@ -631,7 +716,7 @@
       <span class="hero-line"><span>Hafidz Alfik</span></span>
       <span class="hero-line"><span class="hero-nickname">— biasa dipanggil Azka</span></span>
     </h1>
-    <p class="hero-sub">Aku suka pelajaran Sains (IPA), senang menulis cerpen, dan suka koding di saat waktu senggang.</p>
+    <p class="hero-sub">Aku suka pelajaran Sains (IPA), senang menulis cerpen, dan suka koding di waktu senggang.</p>
     <div class="hero-facts">
       <div class="hero-fact">
         <div class="hero-fact-label">Hobi</div>
@@ -648,7 +733,8 @@
     </div>
   </div>
   <div class="hero-photo" id="hero-photo">
-    <img src="profile.png" alt="Azka memegang piala Juara 1 Brilliant Kids Science">
+    <!-- fetchpriority="high" untuk LCP yang lebih cepat -->
+    <img src="profile.png" alt="Azka memegang piala Juara 1 Brilliant Kids Science" fetchpriority="high">
     <div class="hero-photo-caption">Juara 1 Brilliant Kids Science (BKS) IPA</div>
   </div>
 </header>
@@ -661,7 +747,7 @@
 
   <div class="achievement">
     <div class="achievement-photo">
-      <img src="juara-bks.png" alt="Azka menerima piala Juara 1 Brilliant Kids Science bidang IPA">
+      <img src="juara-bks.png" alt="Azka menerima piala Juara 1 Brilliant Kids Science bidang IPA" loading="lazy" decoding="async">
     </div>
     <div class="achievement-text">
       <span class="achievement-tag">Sains</span>
@@ -672,7 +758,7 @@
 
   <div class="achievement reverse">
     <div class="achievement-photo">
-      <img src="juara-cerpen.png" alt="Azka menerima apresiasi dari kepala sekolah untuk lomba cerpen FLS3N">
+      <img src="juara-cerpen.png" alt="Azka menerima apresiasi dari kepala sekolah untuk lomba cerpen FLS3N" loading="lazy" decoding="async">
     </div>
     <div class="achievement-text">
       <span class="achievement-tag">Menulis</span>
@@ -683,18 +769,18 @@
 
   <div class="achievement">
     <div class="achievement-photo">
-      <img src="juara-mipa.png" alt="Azka memegang sertifikat Juara 2 lomba MIPA tingkat sekolah">
+      <img src="juara-mipa.png" alt="Azka memegang sertifikat Juara 2 lomba MIPA tingkat sekolah" loading="lazy" decoding="async">
     </div>
     <div class="achievement-text">
       <span class="achievement-tag">Sains & Matematika</span>
-      <h3>Juara 2 lomba MIPA tingkat Sekolah</h3>
+      <h3>Juara 2 lomba MIPA tingkat sekolah</h3>
       <p>Dalam rangkaian acara Semarak Kemerdekaan di sekolah, aku meraih Juara 2 kategori MIPA fase C, kelas 6C.</p>
     </div>
   </div>
   
   <div class="achievement reverse">
     <div class="achievement-photo">
-      <img src="lolos-osnk.png" class="img-tabel" alt="Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026">
+      <img src="lolos-osnk.png" class="img-tabel" alt="Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026" loading="lazy" decoding="async">
     </div>
     <div class="achievement-text">
       <span class="achievement-tag">Sains</span>
@@ -705,7 +791,7 @@
 
   <div class="achievement">
     <div class="achievement-photo">
-      <img src="juara-pramuka-penggalang.png" alt="Azka berseragam pramuka memegang piala besar Juara 1 Regu Penggalang">
+      <img src="juara-pramuka-penggalang.png" alt="Azka berseragam pramuka memegang piala besar Juara 1 Regu Penggalang" loading="lazy" decoding="async">
     </div>
     <div class="achievement-text">
       <span class="achievement-tag">Pramuka</span>
@@ -723,12 +809,12 @@
   <div class="target-grid">
     <div class="bio-card">
       <div class="bio-card-label">Sains / IPA</div>
-      <div class="bio-card-value">Kompetisi Sains Ruangguru (KSR) Tahun 2026</div>
+      <h3 class="bio-card-value">Kompetisi Sains Ruangguru (KSR) Tahun 2026</h3>
       <div class="bio-card-note">Sedang memperdalam materi bidang IPA untuk persiapan dan bersaing di ajang nasional Ruangguru.</div>
     </div>
     <div class="bio-card">
       <div class="bio-card-label">Sains / IPA</div>
-      <div class="bio-card-value">OSN IPA - Dies Natalis ke-66 SMP Srengat 01</div>
+      <h3 class="bio-card-value">OSN IPA - Dies Natalis ke-66 SMP Srengat 01</h3>
       <div class="bio-card-note">Berlatih keras untuk memberikan yang terbaik pada lomba OSN di perayaan ulang tahun sekolah.</div>
     </div>
   </div>
@@ -757,9 +843,9 @@
   </div>
 
   <div class="ig-cta">
-    <p>Mau tau lebih lanjut tentang aku dan prestasi yang aku raih? atau sekedar ingin chat personal? Jangan lupa mampir akun Instagram ku dibawah ya!</p>
-    <a class="ig-banner-link" href="https://www.instagram.com/azkajuara_?igsi=MTRiM2M2NWNxd2l0" target="_blank" rel="noopener noreferrer">
-      <img src="akunig-azka.png" alt="Follow Instagram @azkajuara_">
+    <p>Mau tahu lebih lanjut tentang aku dan prestasi yang aku raih? Atau sekadar ingin chat personal? Jangan lupa mampir akun Instagram-ku di bawah ya!</p>
+    <a class="ig-banner-link" href="https://www.instagram.com/azkajuara_/" target="_blank" rel="noopener noreferrer">
+      <img src="akunig-azka.png" alt="Follow Instagram @azkajuara_" loading="lazy" decoding="async">
     </a>
   </div>
 </section>
@@ -771,19 +857,24 @@
 
 <script>
   const nav = document.querySelector('.nav');
+  
+  // Passive scroll listener untuk performa rendering yang mulus
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
       nav.classList.add('is-scrolled');
     } else {
       nav.classList.remove('is-scrolled');
     }
-  });
+  }, { passive: true });
 
+  // Animasi awal load
   requestAnimationFrame(() => {
     document.body.classList.add('loaded');
-    document.getElementById('hero-photo').classList.add('is-revealed');
+    const heroPhoto = document.getElementById('hero-photo');
+    if (heroPhoto) heroPhoto.classList.add('is-revealed');
   });
 
+  // IntersectionObserver untuk scroll reveal
   const revealTargets = document.querySelectorAll(
     '.achievement, .bio-card, .section-head, .ig-cta'
   );
@@ -796,7 +887,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
     revealTargets.forEach((el) => observer.observe(el));
   } else {
