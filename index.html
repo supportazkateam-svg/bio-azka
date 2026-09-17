@@ -394,6 +394,12 @@
       border: 1px solid var(--line);
     }
 
+    /* Tambahan class khusus agar gambar poster tidak terpotong */
+    .achievement-photo img.img-poster {
+      aspect-ratio: auto;
+      object-fit: contain;
+    }
+
     .achievement-tag {
       display: inline-block;
       font-size: 13px;
@@ -825,12 +831,13 @@
 
   <div class="achievement reverse">
     <div class="achievement-photo">
-      <img src="juara4-osnipa.png" alt="Azka Juara Harapan 2 OSN IPA Dies Natalis SMP Srengat 01" loading="lazy" decoding="async">
+      <!-- Menambahkan class img-poster agar tidak terpotong (aspect-ratio menyesuaikan gambar asli) -->
+      <img src="juara4-osnipa.png" class="img-poster" alt="Azka Juara Harapan 2 OSN IPA Dies Natalis SMP Srengat 01" loading="lazy" decoding="async">
     </div>
     <div class="achievement-text">
       <span class="achievement-tag">Sains</span>
       <h3>Juara Harapan 2 OSN IPA - Dies Natalis ke-66 SMP Srengat 01</h3>
-      <p>Alhamdulillah, salah satu targetku berhasil terwujud! Aku sukses membawa pulang Juara Harapan 2 untuk lomba OSN MIPAS bidang IPA di acara Dies Natalis ke-66 SMP Srengat 01. Bersaing di ajang ini seru banget dan pastinya bikin aku makin semangat buat terus mendalami sains.</p>
+      <p>Alhamdulillah, salah satu targetku berhasil terwujud! Aku sukses membawa pulang piala Juara Harapan 2 untuk lomba MIPAS Competition bidang IPA di acara Dies Natalis ke-66 SMP Srengat 01. Bersaing di ajang ini seru banget dan pastinya bikin aku makin semangat buat terus mendalami sains.</p>
     </div>
   </div>
 </section>
