@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Judul Halaman -->
-  <title>Biografi - Ibrahimovic Azka Hafidz Alfik | AzkaBlog</title>
+  <!-- 9. Judul Halaman Dioptimalkan (SEO & CTR) -->
+  <title>Azka — Juara 1 Sains Jawa Timur | Portofolio &amp; Catatan Prestasi</title>
   
   <!-- SEO & Google Site Name -->
-  <meta name="description" content="Biografi dan catatan prestasi Ibrahimovic Azka Hafidz Alfik, siswa berprestasi di bidang Sains (IPA), menulis cerpen, dan kepramukaan.">
+  <meta name="description" content="Portofolio resmi Ibrahimovic Azka Hafidz Alfik — Siswa berprestasi peraih Juara 1 Sains (IPA) se-Jawa Timur, finalis FLS2N Menulis, dan penggiat sains serta koding.">
   <meta name="application-name" content="AzkaBlog">
   <meta name="theme-color" content="#F7F9F8">
   <link rel="canonical" href="https://www.azkablog.my.id/">
 
-  <!-- Favicon (Ikon di samping URL pencarian Google) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="profile.png">
   <link rel="apple-touch-icon" href="profile.png">
 
@@ -21,18 +21,33 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AzkaBlog">
   <meta property="og:url" content="https://www.azkablog.my.id/">
-  <meta property="og:title" content="Biografi - Ibrahimovic Azka Hafidz Alfik | AzkaBlog">
-  <meta property="og:description" content="Siswa UPT SD Negeri Srengat 01. Menyukai Sains (IPA), cerpen, dan koding.">
+  <meta property="og:title" content="Azka — Juara 1 Sains Jawa Timur | Portofolio &amp; Catatan Prestasi">
+  <meta property="og:description" content="Siswa UPT SD Negeri Srengat 01. Peraih Juara 1 BKS Sains IPA se-Jawa Timur, finalis FLS2N, dan pramuka penggalang terbaik.">
   <meta property="og:image" content="https://www.azkablog.my.id/profile.png">
 
-  <!-- Structured Data JSON-LD (Standar Resmi Google untuk Memunculkan Nama 'AzkaBlog') -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Azka — Juara 1 Sains Jawa Timur | Portofolio &amp; Catatan Prestasi">
+  <meta name="twitter:description" content="Portofolio resmi Ibrahimovic Azka Hafidz Alfik — Juara 1 Sains IPA se-Jawa Timur dan siswa berprestasi SD Negeri Srengat 01.">
+  <meta name="twitter:image" content="https://www.azkablog.my.id/profile.png">
+
+  <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AzkaBlog",
-    "alternateName": ["Azka Blog", "azkablog"],
-    "url": "https://www.azkablog.my.id/"
+    "@type": "Person",
+    "name": "Ibrahimovic Azka Hafidz Alfik",
+    "alternateName": "Azka",
+    "url": "https://www.azkablog.my.id/",
+    "image": "https://www.azkablog.my.id/profile.png",
+    "alumniOf": "UPT SD Negeri Srengat 01",
+    "jobTitle": "Siswa Berprestasi",
+    "award": [
+      "Juara 1 Brilliant Kids Science IPA se-Jawa Timur",
+      "Juara 1 Regu Pramuka Penggalang Terbaik Se-Kota Malang 2025",
+      "Lolos OSN Tingkat Kabupaten ke Provinsi 2026",
+      "Finalis FLS2N Menulis Cerpen"
+    ]
   }
   </script>
 
@@ -42,46 +57,62 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #F7F9F8;
       --bg-alt: #EFF4F2;
+      --bg-card: #FFFFFF;
       --ink: #12242B;
       --ink-soft: #4A5C61;
+      --ink-muted: #6C7E83;
       --teal: #0E7C7B;
       --teal-deep: #0A5D5C;
+      --teal-tint: rgba(14, 124, 123, 0.08);
       --gold: #D9A441;
+      --gold-deep: #966718;
+      --gold-tint: rgba(217, 164, 65, 0.12);
       --line: #DDE3E1;
+      --line-subtle: #E8ECEB;
       --white: #FFFFFF;
+
+      /* 2. Sistem Spacing Terstandarisasi */
+      --space-section: clamp(64px, 7vw, 96px);
+      --space-gap: clamp(24px, 3.5vw, 40px);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-full: 9999px;
     }
 
     * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
-      /* Mencegah konten tertutup oleh floating navbar saat link menu diklik */
-      scroll-padding-top: 90px;
+      scroll-padding-top: 96px;
     }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       font-size: 17px;
-      line-height: 1.6;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3 {
-      font-family: 'Zilla Slab', serif;
+    h1, h2, h3, h4 {
+      font-family: 'Zilla Slab', Georgia, serif;
       margin: 0;
       color: var(--ink);
+      line-height: 1.2;
     }
 
-    a { color: var(--teal-deep); }
+    a {
+      color: var(--teal-deep);
+      text-decoration: none;
+    }
 
     .wrap {
       max-width: 1080px;
@@ -89,95 +120,115 @@
       padding: 0 32px;
     }
 
-    /* ---------- NAV ---------- */
-    .nav {
+    /* 1. NAVBAR KONSISTEN: Selalu Floating Pill dengan Liquid Blur */
+    .nav-wrapper {
       position: fixed;
-      top: 0;
+      top: 16px;
       left: 0;
       right: 0;
       z-index: 999;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 26px 32px;
-      max-width: 1080px;
-      margin: 0 auto;
-      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-      background: transparent;
-      border: 1px solid transparent;
+      justify-content: center;
+      padding: 0 16px;
+      pointer-events: none;
     }
 
-    /* Efek Floating Liquid Glass Pill saat di-scroll */
-    .nav.is-scrolled {
-      top: 20px;
-      padding: 12px 28px;
+    .nav {
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
       max-width: 680px;
-      background: rgba(247, 249, 248, 0.75);
+      padding: 10px 24px;
+      background: rgba(247, 249, 248, 0.82);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-radius: 100px;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      box-shadow: 0 10px 32px rgba(18, 36, 43, 0.08);
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 8px 24px rgba(18, 36, 43, 0.05);
+      transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .nav.is-scrolled {
+      background: rgba(247, 249, 248, 0.94);
+      border-color: rgba(221, 227, 225, 0.9);
+      box-shadow: 0 12px 32px rgba(18, 36, 43, 0.1);
     }
 
     .nav-mark {
-      font-family: 'Zilla Slab', serif;
-      font-weight: 600;
-      font-size: 19px;
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-weight: 700;
+      font-size: 20px;
       color: var(--teal-deep);
       text-decoration: none;
       transition: opacity 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .nav-mark:hover {
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 22px;
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 15px;
+      font-size: 14.5px;
+      font-weight: 500;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--ink-soft);
-      border-bottom: 1px solid transparent;
-      padding-bottom: 3px;
-      transition: border-color 0.2s, color 0.2s;
+      padding: 4px 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
       white-space: nowrap;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
       color: var(--teal-deep);
       border-color: var(--teal);
     }
 
-    /* ---------- HERO ---------- */
+    /* HERO SECTION */
     .hero {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 56px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 52px;
       align-items: center;
-      padding: 110px 32px 88px;
+      padding: 120px 32px var(--space-section);
       max-width: 1080px;
       margin: 0 auto;
     }
 
     .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
       color: var(--teal-deep);
-      font-size: 15px;
-      margin-bottom: 18px;
+      background: var(--teal-tint);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 20px;
+      border: 1px solid rgba(14, 124, 123, 0.18);
     }
 
     .hero h1 {
-      font-size: 52px;
+      font-size: clamp(38px, 5vw, 54px);
       line-height: 1.08;
       font-weight: 700;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
     }
 
     .hero-nickname {
@@ -186,32 +237,36 @@
 
     .hero-sub {
       margin-top: 22px;
-      font-size: 18px;
+      font-size: 18.5px;
       color: var(--ink-soft);
-      max-width: 46ch;
+      max-width: 48ch;
+      line-height: 1.6;
     }
 
     .hero-facts {
-      margin-top: 30px;
+      margin-top: 32px;
       display: flex;
-      gap: 32px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
     .hero-fact {
-      border-left: 2px solid var(--gold);
-      padding-left: 14px;
+      min-width: 100px;
     }
 
     .hero-fact-label {
       font-size: 13px;
-      color: var(--ink-soft);
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-weight: 500;
     }
 
     .hero-fact-value {
-      font-family: 'Zilla Slab', serif;
-      font-size: 17px;
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 19px;
       font-weight: 600;
+      color: var(--ink);
       margin-top: 2px;
     }
 
@@ -225,62 +280,288 @@
       object-fit: cover;
       object-position: center 20%;
       display: block;
-      border-radius: 6px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 36px rgba(18, 36, 43, 0.08);
+      border: 1px solid var(--line);
     }
 
     .hero-photo-caption {
       position: absolute;
-      left: 16px;
-      bottom: 16px;
-      background: rgba(18, 36, 43, 0.78);
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      background: rgba(18, 36, 43, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       color: var(--white);
-      font-size: 13px;
-      padding: 7px 12px;
-      border-radius: 4px;
+      font-size: 13.5px;
+      font-weight: 500;
+      padding: 9px 14px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    /* ---------- SECTION HEADERS ---------- */
+    /* 2. SECTION HEADERS */
     .section {
-      padding: 72px 32px;
+      padding: var(--space-section) 32px;
       max-width: 1080px;
       margin: 0 auto;
       border-top: 1px solid var(--line);
     }
 
     .section-head {
+      margin-bottom: clamp(36px, 4.5vw, 48px);
+    }
+
+    .section-head-flex {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       gap: 24px;
-      margin-bottom: 48px;
       flex-wrap: wrap;
     }
 
     .section-head h2 {
-      font-size: 32px;
+      font-size: clamp(28px, 4vw, 36px);
       font-weight: 600;
+      letter-spacing: -0.01em;
     }
 
     .section-head p {
       color: var(--ink-soft);
-      max-width: 34ch;
-      margin: 0;
+      max-width: 50ch;
+      margin: 8px 0 0;
+      font-size: 17px;
     }
 
-    /* ---------- BIO & TARGET GRID ---------- */
+    /* 4. HIERARKI VISUAL PRESTASI */
+    .achievement-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .achievement {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 48px;
+      align-items: center;
+      padding: 44px 0;
+      border-top: 1px solid var(--line);
+      position: relative;
+    }
+
+    .achievement:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .achievement.reverse {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    .achievement.reverse .achievement-photo { order: 2; }
+    .achievement.reverse .achievement-text { order: 1; }
+
+    .achievement.is-major {
+      background: linear-gradient(135deg, rgba(217, 164, 65, 0.05) 0%, rgba(247, 249, 248, 0) 100%);
+      border-radius: var(--radius-md);
+      padding: 40px 24px;
+      margin: 8px 0;
+      border: 1px solid rgba(217, 164, 65, 0.35);
+    }
+
+    .achievement-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(18, 36, 43, 0.06);
+    }
+
+    .achievement-photo img.img-tabel,
+    .achievement-photo img.img-poster {
+      aspect-ratio: auto;
+      object-fit: contain;
+      background: var(--white);
+    }
+
+    .achievement-text {
+      position: relative;
+      padding-left: 22px;
+    }
+
+    .achievement-text::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+      transform-origin: top;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .achievement-badge-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.01em;
+    }
+
+    .tier-gold {
+      background: var(--gold-tint);
+      color: var(--gold-deep);
+      border: 1px solid rgba(217, 164, 65, 0.38);
+    }
+
+    .tier-teal {
+      background: var(--teal-tint);
+      color: var(--teal-deep);
+      border: 1px solid rgba(14, 124, 123, 0.25);
+    }
+
+    .tier-neutral {
+      background: var(--bg-alt);
+      color: var(--ink-soft);
+      border: 1px solid var(--line);
+    }
+
+    .achievement-text h3 {
+      font-size: clamp(22px, 2.5vw, 26px);
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .achievement-text p {
+      color: var(--ink-soft);
+      margin: 0;
+      max-width: 48ch;
+      font-size: 16.5px;
+      line-height: 1.6;
+    }
+
+    /* 5. LAYOUT TARGET GRID */
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .target-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 28px 26px;
+      box-shadow: 0 4px 16px rgba(18, 36, 43, 0.03);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .target-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(18, 36, 43, 0.06);
+      border-color: var(--teal);
+    }
+
+    .target-card-top {
+      margin-bottom: 20px;
+    }
+
+    .target-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      background: var(--teal-tint);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+      border: 1px solid rgba(14, 124, 123, 0.2);
+    }
+
+    .target-card-title {
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 23px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+      margin: 0 0 10px;
+    }
+
+    .target-card-note {
+      font-size: 15.5px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    .target-card-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gold-deep);
+      padding-top: 14px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.25);
+    }
+
+    /* 3 & 6. TENTANG AKU */
     .bio-body {
       display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 56px;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 48px;
+      align-items: start;
     }
 
-    .bio-text p {
-      font-size: 18px;
+    .bio-narrative h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .bio-narrative p {
+      font-size: 17.5px;
       color: var(--ink-soft);
       margin: 0 0 18px;
+      line-height: 1.68;
     }
 
-    .bio-text p:last-child { margin-bottom: 0; }
+    .bio-narrative p:last-child {
+      margin-bottom: 0;
+    }
 
     .bio-cards {
       display: flex;
@@ -288,62 +569,130 @@
       gap: 20px;
     }
 
-    .target-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+    .rich-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      border: 1px solid var(--line);
+      box-shadow: 0 4px 16px rgba(18, 36, 43, 0.03);
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .bio-card {
-      background: var(--bg-alt);
-      border-radius: 6px;
-      padding: 22px 24px;
+    .rich-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(18, 36, 43, 0.06);
     }
 
-    .bio-card-label {
-      font-size: 13px;
+    .rich-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .rich-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .rich-card-icon.medical {
+      background: rgba(14, 124, 123, 0.12);
       color: var(--teal-deep);
-      margin-bottom: 6px;
     }
 
-    .bio-card-value {
-      font-family: 'Zilla Slab', serif;
-      font-size: 22px;
+    .rich-card-icon.tech {
+      background: rgba(217, 164, 65, 0.14);
+      color: var(--gold-deep);
+    }
+
+    .rich-card-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rich-card-tag {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--teal-deep);
+    }
+
+    .rich-card-title {
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 21px;
       font-weight: 600;
       color: var(--ink);
+      line-height: 1.2;
     }
 
-    .bio-card-note {
-      font-size: 14px;
+    .rich-card-body {
+      font-size: 15px;
       color: var(--ink-soft);
-      margin-top: 4px;
+      line-height: 1.55;
+      margin: 0;
     }
 
-    /* ---------- INSTAGRAM CTA SECTION ---------- */
+    .rich-card-footer {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line-subtle);
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+
+    /* 7. INSTAGRAM CTA */
     .ig-cta {
-      margin-top: 72px;
-      padding-top: 56px;
-      border-top: 1px solid var(--line);
+      margin-top: var(--space-section);
+      padding: clamp(36px, 5vw, 56px) 28px;
+      background: linear-gradient(180deg, var(--bg-alt) 0%, rgba(239, 244, 242, 0.4) 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
       text-align: center;
     }
 
+    .ig-cta-eyebrow {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .ig-cta h3 {
+      font-size: clamp(24px, 3.5vw, 30px);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
     .ig-cta p {
-      max-width: 65ch;
+      max-width: 60ch;
       margin: 0 auto 28px;
-      font-size: 18px;
-      color: var(--ink);
+      font-size: 17px;
+      color: var(--ink-soft);
       line-height: 1.6;
     }
 
     .ig-banner-link {
       display: inline-block;
-      max-width: 480px; 
+      max-width: 440px; 
       width: 100%;
-      border-radius: 100px; 
+      border-radius: var(--radius-full); 
       overflow: hidden;
       border: 1px solid var(--line);
       background: var(--white);
-      box-shadow: 0 6px 20px rgba(18, 36, 43, 0.04);
+      box-shadow: 0 6px 20px rgba(18, 36, 43, 0.05);
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
@@ -356,76 +705,14 @@
     .ig-banner-link:hover,
     .ig-banner-link:focus-visible {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(18, 36, 43, 0.08);
+      box-shadow: 0 14px 32px rgba(18, 36, 43, 0.1);
       border-color: var(--teal);
     }
 
-    /* ---------- PRESTASI (editorial rows) ---------- */
-    .achievement {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 48px;
-      align-items: center;
-      padding: 48px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .achievement:first-of-type { border-top: none; padding-top: 0; }
-
-    .achievement.reverse {
-      grid-template-columns: 1.15fr 0.85fr;
-    }
-
-    .achievement.reverse .achievement-photo { order: 2; }
-    .achievement.reverse .achievement-text { order: 1; }
-
-    .achievement-photo img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center 25%;
-      display: block;
-      border-radius: 6px;
-    }
-
-    .achievement-photo img.img-tabel {
-      aspect-ratio: auto;
-      object-fit: contain;
-      border: 1px solid var(--line);
-    }
-
-    /* Tambahan class khusus agar gambar poster tidak terpotong */
-    .achievement-photo img.img-poster {
-      aspect-ratio: auto;
-      object-fit: contain;
-    }
-
-    .achievement-tag {
-      display: inline-block;
-      font-size: 13px;
-      color: var(--teal-deep);
-      background: var(--bg-alt);
-      padding: 5px 12px;
-      border-radius: 20px;
-      margin-bottom: 14px;
-    }
-
-    .achievement-text h3 {
-      font-size: 25px;
-      font-weight: 600;
-      line-height: 1.3;
-    }
-
-    .achievement-text p {
-      color: var(--ink-soft);
-      margin: 12px 0 0;
-      max-width: 42ch;
-    }
-
-    /* ---------- FOOTER ---------- */
+    /* FOOTER */
     footer {
       border-top: 1px solid var(--line);
-      padding: 40px 32px 48px;
+      padding: 36px 32px 44px;
       max-width: 1080px;
       margin: 0 auto;
       display: flex;
@@ -437,59 +724,46 @@
 
     footer p {
       color: var(--ink-soft);
-      font-size: 14px;
+      font-size: 14.5px;
       margin: 0;
     }
 
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 760px) {
-      .nav { padding: 20px 16px; }
-      .nav.is-scrolled {
-        top: 16px;
-        padding: 12px 16px; 
-        width: calc(100% - 32px);
-        max-width: 450px;
-      }
-      .nav-mark { font-size: 17px; }
-      .nav-links { gap: 12px; font-size: 13px; }
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 768px) {
+      .nav { padding: 8px 18px; }
+      .nav-mark { font-size: 18px; }
+      .nav-links { gap: 14px; font-size: 13.5px; }
       .hero {
         grid-template-columns: 1fr;
-        padding: 100px 20px 56px;
+        padding: 105px 20px var(--space-section);
         gap: 36px;
       }
       .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
-      .hero h1 { font-size: 38px; }
-      .section { padding: 52px 20px; }
-      .bio-body, .target-grid { grid-template-columns: 1fr; gap: 36px; }
-      
-      .ig-cta { margin-top: 48px; padding-top: 40px; }
-      .ig-cta p { font-size: 16px; }
-
+      .hero-facts { gap: 20px; }
+      .section { padding: var(--space-section) 20px; }
+      .bio-body { grid-template-columns: 1fr; gap: 36px; }
       .achievement,
       .achievement.reverse {
         grid-template-columns: 1fr;
-        gap: 22px;
+        gap: 20px;
       }
       .achievement.reverse .achievement-photo { order: 0; }
       .achievement.reverse .achievement-text { order: 1; }
-      .achievement-photo { max-width: 360px; margin: 0 auto; }
+      .achievement-photo { max-width: 380px; margin: 0 auto; width: 100%; }
       footer { flex-direction: column; align-items: flex-start; }
     }
 
-    @media (max-width: 400px) {
-      .nav.is-scrolled {
-        padding: 10px 12px; 
-      }
-      .nav-mark { font-size: 15px; }
-      .nav-links { gap: 8px; font-size: 12px; }
+    @media (max-width: 440px) {
+      .nav-links { gap: 10px; font-size: 12.5px; }
+      .nav-mark { font-size: 16px; }
     }
 
     :focus-visible {
       outline: 2px solid var(--teal);
-      outline-offset: 2px;
+      outline-offset: 3px;
     }
 
-    /* ---------- MOTION: Progressive Unveiling (Hanya saat JS aktif) ---------- */
+    /* MOTION & ANIMASI */
     .hero-photo img,
     .achievement-photo img {
       transition: clip-path 1s cubic-bezier(0.22, 1, 0.36, 1),
@@ -499,7 +773,7 @@
     .js .hero-photo img,
     .js .achievement-photo img {
       clip-path: inset(0 0 100% 0);
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .hero-photo.is-revealed img,
@@ -509,7 +783,7 @@
     }
 
     .hero-photo-caption {
-      transition: opacity 0.5s ease 0.7s, transform 0.5s ease 0.7s;
+      transition: opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;
     }
 
     .js .hero-photo-caption {
@@ -542,7 +816,7 @@
     body.loaded .hero-sub {
       opacity: 1;
       transform: translateY(0);
-      transition-delay: 0.55s;
+      transition-delay: 0.45s;
     }
 
     .hero-line {
@@ -569,15 +843,10 @@
     }
 
     .hero-fact {
-      transition: opacity 0.4s ease 0.75s;
-      border-left: none;
-      padding-left: 0;
-      min-width: 96px;
+      transition: opacity 0.4s ease 0.65s;
     }
 
-    .js .hero-fact {
-      opacity: 0;
-    }
+    .js .hero-fact { opacity: 0; }
 
     .hero-fact::before {
       content: "";
@@ -590,38 +859,18 @@
       transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .js .hero-fact::before {
-      transform: scaleX(0);
-    }
+    .js .hero-fact::before { transform: scaleX(0); }
 
     body.loaded .hero-fact { opacity: 1; }
-    body.loaded .hero-fact:nth-child(1)::before { transition-delay: 0.75s; transform: scaleX(1); }
-    body.loaded .hero-fact:nth-child(2)::before { transition-delay: 0.87s; transform: scaleX(1); }
-    body.loaded .hero-fact:nth-child(3)::before { transition-delay: 0.99s; transform: scaleX(1); }
+    body.loaded .hero-fact:nth-child(1)::before { transition-delay: 0.65s; transform: scaleX(1); }
+    body.loaded .hero-fact:nth-child(2)::before { transition-delay: 0.75s; transform: scaleX(1); }
+    body.loaded .hero-fact:nth-child(3)::before { transition-delay: 0.85s; transform: scaleX(1); }
 
-    .achievement-text {
-      position: relative;
-      padding-left: 22px;
-    }
-
-    .achievement-text::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 4px;
-      bottom: 4px;
-      width: 2px;
-      background: var(--gold);
-      transform-origin: top;
-      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .js .achievement-text::before {
-      transform: scaleY(0);
-    }
+    .js .achievement-text::before { transform: scaleY(0); }
+    .achievement.is-visible .achievement-text::before { transform: scaleY(1); }
 
     .achievement-text > * {
-      transition: opacity 0.55s ease, transform 0.55s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
     .js .achievement-text > * {
@@ -629,71 +878,35 @@
       transform: translateY(8px);
     }
 
-    .achievement.is-visible .achievement-text::before {
-      transform: scaleY(1);
-    }
-
     .achievement.is-visible .achievement-text > * {
       opacity: 1;
       transform: translateY(0);
     }
 
-    .achievement.is-visible .achievement-text .achievement-tag { transition-delay: 0.25s; }
-    .achievement.is-visible .achievement-text h3 { transition-delay: 0.33s; }
-    .achievement.is-visible .achievement-text p { transition-delay: 0.41s; }
+    .achievement.is-visible .achievement-text .achievement-badge-group { transition-delay: 0.18s; }
+    .achievement.is-visible .achievement-text h3 { transition-delay: 0.26s; }
+    .achievement.is-visible .achievement-text p { transition-delay: 0.34s; }
 
-    .bio-card, .ig-cta {
-      position: relative;
-    }
-
-    .bio-card::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: var(--teal);
-      transform-origin: top;
-      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .js .bio-card::before {
-      transform: scaleY(0);
-    }
-
-    .bio-card > *, .ig-cta {
-      transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
-    }
-
-    .js .bio-card > *, 
-    .js .ig-cta {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-
-    .bio-card.is-visible::before { transform: scaleY(1); }
-    .bio-card.is-visible > *, .ig-cta.is-visible { opacity: 1; transform: translateY(0); }
-
-    .section-head h2 {
+    .target-card, .rich-card, .section-head {
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .js .section-head h2 {
+    .js .target-card,
+    .js .rich-card,
+    .js .section-head {
       opacity: 0;
-      transform: translateY(8px);
+      transform: translateY(10px);
     }
 
-    .section-head.is-visible h2 {
+    .target-card.is-visible,
+    .rich-card.is-visible,
+    .section-head.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* ---------- PREFERS REDUCED MOTION (Aksesibilitas Pengguna) ---------- */
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
+      html { scroll-behavior: auto; }
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
@@ -709,17 +922,16 @@
       .js .hero-sub,
       .js .hero-fact,
       .js .hero-line span,
-      .js .section-head h2,
-      .js .bio-card > *,
-      .js .ig-cta,
+      .js .section-head,
+      .js .target-card,
+      .js .rich-card,
       .js .achievement-text > *,
       .js .hero-photo-caption {
         opacity: 1 !important;
         transform: none !important;
       }
       .js .hero-fact::before,
-      .js .achievement-text::before,
-      .js .bio-card::before {
+      .js .achievement-text::before {
         transform: none !important;
       }
     }
@@ -727,176 +939,305 @@
 </head>
 <body>
 
-<nav class="nav" aria-label="Navigasi Utama">
-  <a href="#profil" class="nav-mark" aria-label="Kembali ke atas">Azka</a>
-  <ul class="nav-links">
-    <li><a href="#profil">Profil</a></li>
-    <li><a href="#prestasi">Prestasi</a></li>
-    <li><a href="#target">Targetku</a></li>
-    <li><a href="#cita-cita">Cita-cita</a></li>
-  </ul>
-</nav>
+<!-- 1. Navbar Konsisten: Floating Pill Terpusat dengan Liquid Glass Blur -->
+<div class="nav-wrapper">
+  <nav class="nav" aria-label="Navigasi Utama">
+    <a href="#profil" class="nav-mark" aria-label="Kembali ke atas">
+      <span>Azka</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#prestasi">Prestasi</a></li>
+      <li><a href="#target">Target</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+    </ul>
+  </nav>
+</div>
 
+<!-- HERO SECTION -->
 <header class="hero" id="profil">
   <div class="hero-intro">
-    <div class="hero-eyebrow">Kelas 6C, UPT SD Negeri Srengat 01</div>
+    <div class="hero-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      Kelas 6C, UPT SD Negeri Srengat 01
+    </div>
     <h1>
       <span class="hero-line"><span>Ibrahimovic Azka</span></span>
       <span class="hero-line"><span>Hafidz Alfik</span></span>
       <span class="hero-line"><span class="hero-nickname">— biasa dipanggil Azka</span></span>
     </h1>
-    <p class="hero-sub">Aku suka pelajaran Sains (IPA), senang menulis cerpen, dan suka koding di waktu senggang.</p>
+    <p class="hero-sub">Siswa sekolah dasar yang menekuni dunia Sains (IPA), gemar menulis karya fiksi, dan aktif mengeksplorasi pemrograman web.</p>
     <div class="hero-facts">
       <div class="hero-fact">
-        <div class="hero-fact-label">Hobi</div>
-        <div class="hero-fact-value">Koding</div>
+        <div class="hero-fact-label">Pelajaran Favorit</div>
+        <div class="hero-fact-value">Sains (IPA)</div>
       </div>
       <div class="hero-fact">
         <div class="hero-fact-label">Cita-cita</div>
         <div class="hero-fact-value">Dokter</div>
       </div>
       <div class="hero-fact">
-        <div class="hero-fact-label">Pelajaran favorit</div>
-        <div class="hero-fact-value">Sains (IPA)</div>
+        <div class="hero-fact-label">Eksplorasi</div>
+        <div class="hero-fact-value">Koding Web</div>
       </div>
     </div>
   </div>
   <div class="hero-photo" id="hero-photo">
-    <!-- fetchpriority="high" untuk pemuatan gambar utama lebih cepat -->
-    <img src="profile.png" alt="Azka memegang piala Juara 1 Brilliant Kids Science" fetchpriority="high">
-    <div class="hero-photo-caption">Juara 1 Brilliant Kids Science (BKS) IPA</div>
+    <img src="profile.png" alt="Azka memegang piala Juara 1 Brilliant Kids Science se-Jawa Timur" fetchpriority="high">
+    <div class="hero-photo-caption">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+      Juara 1 Brilliant Kids Science (BKS) IPA se-Jawa Timur
+    </div>
   </div>
 </header>
 
+<!-- 4. RIWAYAT PRESTASI DENGAN HIERARKI TINGKATAN (PROVINSI, KOTA, KECAMATAN, SEKOLAH) -->
 <section class="section" id="prestasi">
   <div class="section-head">
-    <h2>Riwayat Prestasi</h2>
-    <p>Beberapa lomba yang pernah aku ikuti dan menangkan.</p>
-  </div>
-
-  <div class="achievement">
-    <div class="achievement-photo">
-      <img src="juara-bks.png" alt="Azka menerima piala Juara 1 Brilliant Kids Science bidang IPA" loading="lazy" decoding="async">
-    </div>
-    <div class="achievement-text">
-      <span class="achievement-tag">Sains</span>
-      <h3>Juara 1 Brilliant Kids Science (BKS) bidang IPA se-Jawa Timur</h3>
-      <p>Aku meraih peringkat pertama dalam kompetisi sains tingkat provinsi ini, bersaing dengan peserta dari seluruh Jawa Timur di bidang IPA.</p>
+    <div class="section-head-flex">
+      <div>
+        <h2>Riwayat Prestasi</h2>
+        <p>Catatan kompetisi sains, literasi, dan kepramukaan yang pernah aku ikuti dan perjuangkan.</p>
+      </div>
     </div>
   </div>
 
-  <div class="achievement reverse">
-    <div class="achievement-photo">
-      <img src="juara-cerpen.png" alt="Azka menerima apresiasi dari kepala sekolah untuk lomba cerpen FLS3N" loading="lazy" decoding="async">
-    </div>
-    <div class="achievement-text">
-      <span class="achievement-tag">Menulis</span>
-      <h3>6 besar dan 3 besar FLS3N Cerpen tingkat Kecamatan</h3>
-      <p>Di ajang Festival dan Lomba Seni Siswa Nasional (FLS3N) cabang cerpen, aku dua kali melaju sebagai finalis: masuk 6 besar, lalu naik ke 3 besar tingkat kecamatan.</p>
-    </div>
-  </div>
+  <div class="achievement-list">
+    <!-- PRESTASI UTAMA: Tingkat Provinsi (Emas) -->
+    <article class="achievement is-major">
+      <div class="achievement-photo">
+        <img src="juara-bks.png" alt="Azka menerima piala Juara 1 Brilliant Kids Science bidang IPA se-Jawa Timur" loading="lazy" decoding="async">
+      </div>
+      <div class="achievement-text">
+        <div class="achievement-badge-group">
+          <span class="tier-badge tier-gold">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Tingkat Provinsi • Juara 1
+          </span>
+          <span class="tier-badge tier-neutral">Sains (IPA)</span>
+        </div>
+        <h3>Juara 1 Brilliant Kids Science (BKS) IPA se-Jawa Timur</h3>
+        <p>Meraih peringkat pertama dalam kompetisi sains bergengsi tingkat provinsi, bersaing dengan ratusan peserta terbaik dari berbagai kota dan kabupaten di Jawa Timur.</p>
+      </div>
+    </article>
 
-  <div class="achievement">
-    <div class="achievement-photo">
-      <img src="juara-mipa.png" alt="Azka memegang sertifikat Juara 2 lomba MIPA tingkat sekolah" loading="lazy" decoding="async">
-    </div>
-    <div class="achievement-text">
-      <span class="achievement-tag">Sains & Matematika</span>
-      <h3>Juara 2 lomba MIPA tingkat sekolah</h3>
-      <p>Dalam rangkaian acara Semarak Kemerdekaan di sekolah, aku meraih Juara 2 kategori MIPA fase C, kelas 6C.</p>
-    </div>
-  </div>
-  
-  <div class="achievement reverse">
-    <div class="achievement-photo">
-      <img src="lolos-osnk.png" class="img-tabel" alt="Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026" loading="lazy" decoding="async">
-    </div>
-    <div class="achievement-text">
-      <span class="achievement-tag">Sains</span>
-      <h3>Lolos OSN tingkat Kabupaten bidang IPA Tahun 2026</h3>
-      <p>Aku lolos ke tingkat Provinsi dalam Olimpiade Sains Nasional (OSN) bidang IPA tahun 2026.</p>
-    </div>
-  </div>
+    <!-- PRESTASI: OSN Lolos ke Provinsi 2026 -->
+    <article class="achievement reverse">
+      <div class="achievement-photo">
+        <img src="lolos-osnk.png" class="img-tabel" alt="Tabel pengumuman Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026" loading="lazy" decoding="async">
+      </div>
+      <div class="achievement-text">
+        <div class="achievement-badge-group">
+          <span class="tier-badge tier-gold">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Tingkat Provinsi • Lolos Seleksi 2026
+          </span>
+          <span class="tier-badge tier-neutral">Olimpiade Sains Nasional</span>
+        </div>
+        <h3>Lolos OSN Tingkat Kabupaten Menuju Provinsi Bidang IPA</h3>
+        <p>Berhasil menembus seleksi ketat Olimpiade Sains Nasional (OSN) tingkat kabupaten dan berhak mewakili daerah melaju ke kompetisi OSN tingkat Provinsi Jawa Timur tahun 2026.</p>
+      </div>
+    </article>
 
-  <div class="achievement">
-    <div class="achievement-photo">
-      <img src="juara-pramuka-penggalang.png" alt="Azka berseragam pramuka memegang piala besar Juara 1 Regu Penggalang" loading="lazy" decoding="async">
-    </div>
-    <div class="achievement-text">
-      <span class="achievement-tag">Pramuka</span>
-      <h3>Juara 1 Regu Pramuka Penggalang Terbaik Se-Kota Malang Tahun 2025</h3>
-      <p>Bersama reguku, kami berhasil meraih juara pertama sebagai regu pramuka penggalang terbaik se-Kota Malang dan mendapatkan Piala Bergilir Wali Kota Malang berkat kekompakan dan keterampilan kepramukaan yang kami latih bersama.</p>
-    </div>
-  </div>
+    <!-- PRESTASI: Tingkat Kota Malang (Pramuka Penggalang) -->
+    <article class="achievement">
+      <div class="achievement-photo">
+        <img src="juara-pramuka-penggalang.png" alt="Azka berseragam pramuka memegang piala besar Juara 1 Regu Penggalang Se-Kota Malang" loading="lazy" decoding="async">
+      </div>
+      <div class="achievement-text">
+        <div class="achievement-badge-group">
+          <span class="tier-badge tier-teal">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            Tingkat Kota • Juara 1
+          </span>
+          <span class="tier-badge tier-neutral">Pramuka Penggalang</span>
+        </div>
+        <h3>Juara 1 Regu Pramuka Terbaik Se-Kota Malang (Piala Bergilir Wali Kota)</h3>
+        <p>Bersama regu penggalang, berhasil meraih predikat regu terbaik se-Kota Malang dan memboyong Piala Bergilir Wali Kota Malang lewat kekompakan teknik baris-berbaris, kepanduan, dan ketangkasan.</p>
+      </div>
+    </article>
 
-  <div class="achievement reverse">
-    <div class="achievement-photo">
-      <!-- Menambahkan class img-poster agar tidak terpotong (aspect-ratio menyesuaikan gambar asli) -->
-      <img src="juara4-osnipa.png" class="img-poster" alt="Azka Juara Harapan 2 OSN IPA Dies Natalis SMP Srengat 01" loading="lazy" decoding="async">
-    </div>
-    <div class="achievement-text">
-      <span class="achievement-tag">Sains</span>
-      <h3>Juara Harapan 2 OSN IPA - Dies Natalis ke-66 SMP Srengat 01</h3>
-      <p>Alhamdulillah, salah satu targetku berhasil terwujud! Aku sukses membawa pulang Juara Harapan 2 untuk lomba OSN MIPAS bidang IPA di acara Dies Natalis ke-66 SMP Srengat 01. Bersaing di ajang ini seru banget dan pastinya bikin aku makin semangat buat terus mendalami sains.</p>
-    </div>
+    <!-- PRESTASI: FLS2N Menulis Cerpen Tingkat Kecamatan -->
+    <article class="achievement reverse">
+      <div class="achievement-photo">
+        <img src="juara-cerpen.png" alt="Azka menerima piagam apresiasi dari kepala sekolah untuk lomba FLS2N menulis cerpen" loading="lazy" decoding="async">
+      </div>
+      <div class="achievement-text">
+        <div class="achievement-badge-group">
+          <span class="tier-badge tier-neutral">Tingkat Kecamatan • Finalis</span>
+          <span class="tier-badge tier-neutral">Literasi &amp; Fiksi</span>
+        </div>
+        <!-- 8. Ejaan Konsisten: FLS2N -->
+        <h3>Finalis 3 Besar &amp; 6 Besar FLS2N Menulis Cerpen</h3>
+        <p>Pada ajang Festival dan Lomba Seni Siswa Nasional (FLS2N) cabang menulis cerpen, berhasil dua kali menembus babak final hingga meraih peringkat 3 besar di tingkat kecamatan.</p>
+      </div>
+    </article>
+
+    <!-- PRESTASI: Lomba Tingkat Sub-Rayon SMP -->
+    <article class="achievement">
+      <div class="achievement-photo">
+        <img src="juara4-osnipa.png" class="img-poster" alt="Poster pengumuman Azka meraih Juara Harapan 2 OSN IPA Dies Natalis SMP Srengat 01" loading="lazy" decoding="async">
+      </div>
+      <div class="achievement-text">
+        <div class="achievement-badge-group">
+          <span class="tier-badge tier-neutral">Tingkat Sub-Rayon • Harapan 2</span>
+          <span class="tier-badge tier-neutral">Sains (IPA)</span>
+        </div>
+        <h3>Juara Harapan 2 OSN IPA — Dies Natalis ke-66 SMPN 1 Srengat</h3>
+        <p>Mengikuti kompetisi terbuka sains yang diadakan dalam rangka Dies Natalis ke-66 SMP Negeri 1 Srengat dan berhasil meraih Juara Harapan 2 di kategori OSN MIPAS bidang IPA.</p>
+      </div>
+    </article>
+
+    <!-- PRESTASI: Tingkat Sekolah -->
+    <article class="achievement reverse">
+      <div class="achievement-photo">
+        <img src="juara-mipa.png" alt="Azka memegang sertifikat Juara 2 lomba MIPA tingkat sekolah" loading="lazy" decoding="async">
+      </div>
+      <div class="achievement-text">
+        <div class="achievement-badge-group">
+          <span class="tier-badge tier-neutral">Tingkat Sekolah • Juara 2</span>
+          <span class="tier-badge tier-neutral">MIPA Fase C</span>
+        </div>
+        <h3>Juara 2 Lomba MIPA Tingkat Sekolah</h3>
+        <p>Meraih peringkat kedua dalam ajang kompetisi MIPA tingkat sekolah kategori Fase C pada gelaran Semarak Kemerdekaan di UPT SD Negeri Srengat 01.</p>
+      </div>
+    </article>
   </div>
 </section>
 
+<!-- 5. TARGETKU SAAT INI: Layout 2 Kolom Seimbang Tanpa Area Kosong -->
 <section class="section" id="target">
   <div class="section-head">
     <h2>Targetku Saat Ini</h2>
-    <p>Fokus belajarku dan kompetisi yang sedang aku perjuangkan selanjutnya.</p>
+    <p>Fokus persiapan belajar dan agenda kompetisi sains yang sedang aku persiapkan secara intensif.</p>
   </div>
+  
   <div class="target-grid">
-    <div class="bio-card">
-      <div class="bio-card-label">Sains / IPA</div>
-      <h3 class="bio-card-value">Kompetisi Sains Ruangguru (KSR) SD Tahun 2026</h3>
-      <div class="bio-card-note">Sedang memperdalam materi bidang IPA untuk persiapan dan bersaing di ajang nasional Ruangguru.</div>
+    <!-- Target 1: KSR Ruangguru -->
+    <div class="target-card">
+      <div class="target-card-top">
+        <span class="target-card-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="12 6 12 12 16 14"/></svg>
+          Tingkat Nasional • Sains SD
+        </span>
+        <h3 class="target-card-title">Kompetisi Sains Ruangguru (KSR) Tahun 2026</h3>
+        <div class="target-card-note">
+          Memperdalam materi pemahaman konsep IPA, eksperimen analitis, dan latihan soal penalaran tingkat lanjut untuk menghadapi persaingan sains berskala nasional.
+        </div>
+      </div>
+      <div class="target-card-status">
+        <span class="status-dot"></span>
+        <span>Tahap Pendalaman Materi &amp; Simulasi</span>
+      </div>
+    </div>
+
+    <!-- Target 2: OSN Tingkat Provinsi 2026 (Menyeimbangkan Grid 2 Kolom) -->
+    <div class="target-card">
+      <div class="target-card-top">
+        <span class="target-card-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Tingkat Provinsi • Olimpiade Resmi
+        </span>
+        <h3 class="target-card-title">OSN IPA SD Tingkat Provinsi Jawa Timur 2026</h3>
+        <div class="target-card-note">
+          Melanjutkan langkah setelah lolos seleksi kabupaten, fokus melatih penguasaan soal HOTS (Higher Order Thinking Skills) dan studi kasus sains untuk merebut tiket ke tingkat nasional.
+        </div>
+      </div>
+      <div class="target-card-status">
+        <span class="status-dot"></span>
+        <span>Lolos Kabupaten &bull; Persiapan Menuju Provinsi</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="cita-cita">
+<!-- 3 & 6. TENTANG AKU & CITA-CITA: Cerita Baru Tanpa Repetisi + Card Kaya Ikon -->
+<section class="section" id="tentang">
   <div class="bio-body">
-    <div class="bio-text">
-      <h2 style="font-size:32px; font-weight:600; margin-bottom:22px;">Tentang aku</h2>
-      <p>Aku murid kelas 6C di UPT SD Negeri Srengat 01. Aku paling senang kalau lagi pelajaran Sains (IPA), dan sudah beberapa kali bawa pulang piala dari lomba-lomba sains.</p>
-      <p>Di luar sains, aku juga suka menulis cerita pendek dan pernah masuk final FLS3N cabang cerpen tingkat kecamatan. Kalau lagi nggak belajar, aku paling suka yaa... ngoding 😁.</p>
-      <p>Cita-citaku jadi dokter. Rasa suka aku sama sains sekarang inilah juga jadi bekal buat cita-cita itu nanti.</p>
+    <!-- 6. Konten Cerita yang Memperdalam Profil (Bukan Sekadar Mengulang Hero) -->
+    <div class="bio-narrative">
+      <h2>Tentang Aku</h2>
+      <p>Rasa penasaran selalu menjadi pemicu terbesarku dalam belajar. Bagiku, memahami rahasia bagaimana alam semesta, tumbuhan, dan sistem tubuh manusia bekerja rasanya seperti memecahkan teka-teki misteri yang tak pernah membosankan.</p>
+      <p>Aku percaya bahwa kecerdasan analitis dan imajinasi kreatif harus berjalan beriringan. Saat sedang tidak membaca modul olimpiade IPA, aku gemar merangkai jalan cerita fiksi untuk melatih kepekaan empati, serta membedah baris-baris kode web untuk melatih ketajaman logika penyelesaian masalah.</p>
+      <p>Pengalaman bertanding di panggung kompetisi mengajarkanku arti konsistensi, ketenangan, dan kerja keras. Semua proses ini aku jalani dengan penuh kegembiraan sebagai bekal untuk berkontribusi di bidang sains dan kesehatan kelak.</p>
     </div>
+
+    <!-- 3. Card dengan Ikon, Subjudul, dan Konten Seimbang -->
     <div class="bio-cards">
-      <div class="bio-card">
-        <div class="bio-card-label">Cita-cita</div>
-        <div class="bio-card-value">Dokter</div>
-        <div class="bio-card-note">Aku ingin membantu orang lewat ilmu sains yang aku pelajari sejak SD.</div>
+      <!-- Card Dokter dengan Ikon Stetoskop / Kedokteran -->
+      <div class="rich-card">
+        <div class="rich-card-header">
+          <div class="rich-card-icon medical" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+              <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+              <circle cx="20" cy="10" r="2"/>
+            </svg>
+          </div>
+          <div class="rich-card-meta">
+            <span class="rich-card-tag">Aspirasi Masa Depan</span>
+            <h3 class="rich-card-title">Profesi Dokter</h3>
+          </div>
+        </div>
+        <p class="rich-card-body">
+          Bercita-cita mendalami dunia kedokteran untuk menolong sesama. Kecintaan pada sains sejak bangku sekolah dasar menjadi fondasi awal untuk memahami sains biomedis dan kesehatan secara mendalam.
+        </p>
+        <div class="rich-card-footer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <span>Fokus: Biologi, Sains Terapan &amp; Pelayanan</span>
+        </div>
       </div>
-      <div class="bio-card">
-        <div class="bio-card-label">Hobi</div>
-        <div class="bio-card-value">Koding</div>
-        <div class="bio-card-note">Kerja sampingan aku setelah lomba dan belajar 😂.</div>
+
+      <!-- Card Koding dengan Ikon Terminal / Pemrograman -->
+      <div class="rich-card">
+        <div class="rich-card-header">
+          <div class="rich-card-icon tech" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="rich-card-meta">
+            <span class="rich-card-tag">Hobi &amp; Logika</span>
+            <h3 class="rich-card-title">Eksplorasi Koding</h3>
+          </div>
+        </div>
+        <p class="rich-card-body">
+          Tertarik merancang halaman web dan memahami cara kerja algoritma. Koding menjadi sarana rehat yang mengasyikkan sekaligus mengasah cara berpikir sistematis dan terstruktur.
+        </p>
+        <div class="rich-card-footer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Fokus: HTML/CSS, Web Design &amp; Logika Algoritma</span>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- 7. CTA Instagram Spesifik, Ramah, dan Mengundang Interaksi -->
   <div class="ig-cta">
-    <p>Mau tahu lebih lanjut tentang aku dan prestasi yang aku raih? Atau sekadar ingin chat personal? Jangan lupa mampir akun Instagram-ku di bawah ya!</p>
-    <a class="ig-banner-link" href="https://www.instagram.com/azkajuara_/" target="_blank" rel="noopener noreferrer">
-      <img src="akunig-azka.png" alt="Follow Instagram @azkajuara_" loading="lazy" decoding="async">
+    <div class="ig-cta-eyebrow">Mari Terhubung</div>
+    <h3>Punya Pertanyaan Seputar Sains atau Mau Diskusi Proyek?</h3>
+    <p>
+      Kalau kamu ingin berdiskusi tentang persiapan kompetisi sains, saling berbagi tips belajar IPA, atau sekadar bertukar ide seputar dunia koding, silakan kirim pesan ke Instagram aku!
+    </p>
+    <a class="ig-banner-link" href="https://www.instagram.com/azkajuara_/" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi dan Kirim Pesan di Profil Instagram @azkajuara_">
+      <img src="akunig-azka.png" alt="Profil Instagram @azkajuara_" loading="lazy" decoding="async">
     </a>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>Ibrahimovic Azka Hafidz Alfik — Kelas 6C, UPT SD Negeri Srengat 01</p>
-  <p>Dibuat dengan bangga oleh aku sendiri 😁</p>
+  <p>Ibrahimovic Azka Hafidz Alfik &mdash; Kelas 6C, UPT SD Negeri Srengat 01</p>
+  <p>Dirancang &amp; dikembangkan secara mandiri dengan dedikasi.</p>
 </footer>
 
 <script>
   const nav = document.querySelector('.nav');
   
-  // Passive scroll listener untuk performa rendering yang mulus
+  // 1. Passive scroll listener untuk memperkuat shadow pill secara halus tanpa mengubah ukuran/posisi
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
+    if (window.scrollY > 40) {
       nav.classList.add('is-scrolled');
     } else {
       nav.classList.remove('is-scrolled');
@@ -910,9 +1251,9 @@
     if (heroPhoto) heroPhoto.classList.add('is-revealed');
   });
 
-  // IntersectionObserver untuk scroll reveal
+  // IntersectionObserver untuk scroll reveal halus
   const revealTargets = document.querySelectorAll(
-    '.achievement, .bio-card, .section-head, .ig-cta'
+    '.achievement, .target-card, .rich-card, .section-head, .ig-cta'
   );
 
   if ('IntersectionObserver' in window) {
@@ -923,7 +1264,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
 
     revealTargets.forEach((el) => observer.observe(el));
   } else {
