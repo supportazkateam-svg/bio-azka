@@ -8,10 +8,13 @@
   <title>Azka Blog | Biografi Ibrahimovic Azka Hafidz Alfik</title>
   
   <!-- SEO & Google Site Name -->
-  <meta name="description" content="Portofolio resmi Ibrahimovic Azka Hafidz Alfik — Siswa berprestasi peraih Juara 1 Sains (IPA) se-Jawa Timur, finalis FLS2N Menulis, dan penggiat sains serta koding.">
+  <meta name="description" content="Portofolio resmi Ibrahimovic Azka Hafidz Alfik — Siswa berprestasi peraih Juara 1 Sains (IPA) se-Jawa Timur, finalis FLS3N Menulis, dan penggiat sains serta koding.">
   <meta name="application-name" content="AzkaBlog">
   <meta name="theme-color" content="#F7F9F8">
   <link rel="canonical" href="https://www.azkablog.my.id/">
+
+  <!-- Preload Gambar Hero Utama -->
+  <link rel="preload" as="image" href="profile.png" type="image/png" fetchpriority="high">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="profile.png">
@@ -22,7 +25,7 @@
   <meta property="og:site_name" content="AzkaBlog">
   <meta property="og:url" content="https://www.azkablog.my.id/">
   <meta property="og:title" content="Azka — Juara 1 Sains Jawa Timur | Portofolio &amp; Catatan Prestasi">
-  <meta property="og:description" content="Siswa UPT SD Negeri Srengat 01. Peraih Juara 1 BKS Sains IPA se-Jawa Timur, finalis FLS2N, dan pramuka penggalang terbaik.">
+  <meta property="og:description" content="Siswa UPT SD Negeri Srengat 01. Peraih Juara 1 BKS Sains IPA se-Jawa Timur, finalis FLS3N, dan pramuka penggalang terbaik.">
   <meta property="og:image" content="https://www.azkablog.my.id/profile.png">
 
   <!-- Twitter Card -->
@@ -46,7 +49,7 @@
       "Juara 1 Brilliant Kids Science IPA se-Jawa Timur",
       "Juara 1 Regu Pramuka Penggalang Terbaik Se-Kota Malang 2025",
       "Lolos OSN Tingkat Kabupaten ke Provinsi 2026",
-      "Finalis FLS2N Menulis Cerpen"
+      "Finalis FLS3N Menulis Cerpen"
     ]
   }
   </script>
@@ -89,7 +92,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 96px;
+      scroll-padding-top: 110px;
     }
 
     body {
@@ -120,40 +123,46 @@
       padding: 0 32px;
     }
 
-    /* 1. NAVBAR KONSISTEN: Selalu Floating Pill dengan Liquid Blur */
-    .nav-wrapper {
+    /* ---------- NAV ---------- */
+    .nav {
       position: fixed;
-      top: 16px;
+      top: 0;
       left: 0;
       right: 0;
       z-index: 999;
       display: flex;
-      justify-content: center;
-      padding: 0 16px;
-      pointer-events: none;
-    }
-
-    .nav {
-      pointer-events: auto;
-      display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
+      padding: 26px 32px;
+      max-width: 1080px;
+      margin: 0 auto;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 0;
+      transform: translateY(0);
+
+      /* Transisi Eksplisit — bukan transition: all */
+      transition:
+        max-width 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        padding 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        border-radius 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Efek Floating Liquid Glass Pill saat di-scroll */
+    .nav.is-scrolled {
+      padding: 12px 28px;
       max-width: 680px;
-      padding: 10px 24px;
       background: rgba(247, 249, 248, 0.82);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-radius: var(--radius-full);
       border: 1px solid rgba(255, 255, 255, 0.85);
-      box-shadow: 0 8px 24px rgba(18, 36, 43, 0.05);
-      transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-
-    .nav.is-scrolled {
-      background: rgba(247, 249, 248, 0.94);
-      border-color: rgba(221, 227, 225, 0.9);
-      box-shadow: 0 12px 32px rgba(18, 36, 43, 0.1);
+      box-shadow: 0 10px 32px rgba(18, 36, 43, 0.08);
+      transform: translateY(20px);
     }
 
     .nav-mark {
@@ -163,9 +172,6 @@
       color: var(--teal-deep);
       text-decoration: none;
       transition: opacity 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
     }
 
     .nav-mark:hover {
@@ -174,7 +180,7 @@
 
     .nav-links {
       display: flex;
-      gap: 22px;
+      gap: 24px;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -192,7 +198,8 @@
     }
 
     .nav-links a:hover,
-    .nav-links a:focus-visible {
+    .nav-links a:focus-visible,
+    .nav-links a[aria-current="page"] {
       color: var(--teal-deep);
       border-color: var(--teal);
     }
@@ -276,6 +283,7 @@
 
     .hero-photo img {
       width: 100%;
+      height: auto;
       aspect-ratio: 3 / 4;
       object-fit: cover;
       object-position: center 20%;
@@ -374,6 +382,7 @@
 
     .achievement-photo img {
       width: 100%;
+      height: auto;
       aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center 25%;
@@ -730,7 +739,12 @@
 
     /* RESPONSIVE BREAKPOINTS */
     @media (max-width: 768px) {
-      .nav { padding: 8px 18px; }
+      .nav { padding: 20px 16px; }
+      .nav.is-scrolled {
+        padding: 12px 16px;
+        width: calc(100% - 32px);
+        max-width: 450px;
+      }
       .nav-mark { font-size: 18px; }
       .nav-links { gap: 14px; font-size: 13.5px; }
       .hero {
@@ -754,8 +768,9 @@
     }
 
     @media (max-width: 440px) {
-      .nav-links { gap: 10px; font-size: 12.5px; }
+      .nav.is-scrolled { padding: 10px 12px; }
       .nav-mark { font-size: 16px; }
+      .nav-links { gap: 10px; font-size: 12.5px; }
     }
 
     :focus-visible {
@@ -940,19 +955,15 @@
 <body>
 
 <!-- 1. Navbar Konsisten: Floating Pill Terpusat dengan Liquid Glass Blur -->
-<div class="nav-wrapper">
-  <nav class="nav" aria-label="Navigasi Utama">
-    <a href="#profil" class="nav-mark" aria-label="Kembali ke atas">
-      <span>Azka</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#profil">Profil</a></li>
-      <li><a href="#prestasi">Prestasi</a></li>
-      <li><a href="#target">Target</a></li>
-      <li><a href="#tentang">Tentang</a></li>
-    </ul>
-  </nav>
-</div>
+<nav class="nav" aria-label="Navigasi Utama">
+  <a href="#profil" class="nav-mark" aria-label="Beranda AzkaBlog">Azka</a>
+  <ul class="nav-links">
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#prestasi">Prestasi</a></li>
+    <li><a href="#target">Target</a></li>
+    <li><a href="#tentang">Tentang</a></li>
+  </ul>
+</nav>
 
 <!-- HERO SECTION -->
 <header class="hero" id="profil">
@@ -983,7 +994,7 @@
     </div>
   </div>
   <div class="hero-photo" id="hero-photo">
-    <img src="profile.png" alt="Azka memegang piala Juara 1 Brilliant Kids Science se-Jawa Timur" fetchpriority="high">
+    <img src="profile.png" alt="Azka memegang piala Juara 1 Brilliant Kids Science se-Jawa Timur" fetchpriority="high" width="680" height="1208">
     <div class="hero-photo-caption">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
       Juara 1 Brilliant Kids Science (BKS) IPA se-Jawa Timur
@@ -1006,7 +1017,7 @@
     <!-- PRESTASI UTAMA: Tingkat Provinsi (Emas) -->
     <article class="achievement is-major">
       <div class="achievement-photo">
-        <img src="juara-bks.png" alt="Azka menerima piala Juara 1 Brilliant Kids Science bidang IPA se-Jawa Timur" loading="lazy" decoding="async">
+        <img src="juara-bks.png" alt="Azka menerima piala Juara 1 Brilliant Kids Science bidang IPA se-Jawa Timur" loading="lazy" decoding="async" width="900" height="1600">
       </div>
       <div class="achievement-text">
         <div class="achievement-badge-group">
@@ -1024,7 +1035,7 @@
     <!-- PRESTASI: OSN Lolos ke Provinsi 2026 -->
     <article class="achievement reverse">
       <div class="achievement-photo">
-        <img src="lolos-osnk.png" class="img-tabel" alt="Tabel pengumuman Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026" loading="lazy" decoding="async">
+        <img src="lolos-osnk.png" class="img-tabel" alt="Tabel pengumuman Azka lolos OSN tingkat kabupaten bidang IPA tahun 2026" loading="lazy" decoding="async" width="1448" height="196">
       </div>
       <div class="achievement-text">
         <div class="achievement-badge-group">
@@ -1042,7 +1053,7 @@
     <!-- PRESTASI: Tingkat Kota Malang (Pramuka Penggalang) -->
     <article class="achievement">
       <div class="achievement-photo">
-        <img src="juara-pramuka-penggalang.png" alt="Azka berseragam pramuka memegang piala besar Juara 1 Regu Penggalang Se-Kota Malang" loading="lazy" decoding="async">
+        <img src="juara-pramuka-penggalang.png" alt="Azka berseragam pramuka memegang piala besar Juara 1 Regu Penggalang Se-Kota Malang" loading="lazy" decoding="async" width="897" height="1600">
       </div>
       <div class="achievement-text">
         <div class="achievement-badge-group">
@@ -1060,14 +1071,14 @@
     <!-- PRESTASI: FLS3N Menulis Cerpen Tingkat Kecamatan -->
     <article class="achievement reverse">
       <div class="achievement-photo">
-        <img src="juara-cerpen.png" alt="Azka menerima piagam apresiasi dari kepala sekolah untuk lomba FLS3N menulis cerpen" loading="lazy" decoding="async">
+        <img src="juara-cerpen.png" class="img-tabel" alt="Azka menerima piagam apresiasi dari kepala sekolah untuk lomba FLS3N menulis cerpen" loading="lazy" decoding="async" width="760" height="570">
       </div>
       <div class="achievement-text">
         <div class="achievement-badge-group">
           <span class="tier-badge tier-neutral">Tingkat Kecamatan • Finalis</span>
           <span class="tier-badge tier-neutral">Literasi &amp; Fiksi</span>
         </div>
-        <!-- 8. Ejaan Konsisten: FLS2N -->
+        <!-- Ejaan Konsisten: FLS3N -->
         <h3>Finalis 3 Besar &amp; 6 Besar FLS3N Menulis Cerpen</h3>
         <p>Pada ajang Festival Lomba Seni dan Sastra Siswa Nasional (FLS3N) cabang menulis cerpen, berhasil dua kali menembus babak final hingga meraih peringkat 3 besar di tingkat kecamatan.</p>
       </div>
@@ -1076,7 +1087,7 @@
     <!-- PRESTASI: Lomba Tingkat Sub-Rayon SMP -->
     <article class="achievement">
       <div class="achievement-photo">
-        <img src="juara4-osnipa.png" class="img-poster" alt="Poster pengumuman Azka meraih Juara Harapan 2 OSN IPA Dies Natalis SMP Srengat 01" loading="lazy" decoding="async">
+        <img src="juara4-osnipa.png" class="img-poster" alt="Poster pengumuman Azka meraih Juara Harapan 2 OSN IPA Dies Natalis SMP Srengat 01" loading="lazy" decoding="async" width="900" height="1600">
       </div>
       <div class="achievement-text">
         <div class="achievement-badge-group">
@@ -1091,7 +1102,7 @@
     <!-- PRESTASI: Tingkat Sekolah -->
     <article class="achievement reverse">
       <div class="achievement-photo">
-        <img src="juara-mipa.png" alt="Azka memegang sertifikat Juara 2 lomba MIPA tingkat sekolah" loading="lazy" decoding="async">
+        <img src="juara-mipa.png" class="img-tabel" alt="Azka memegang sertifikat Juara 2 lomba MIPA tingkat sekolah" loading="lazy" decoding="async" width="760" height="570">
       </div>
       <div class="achievement-text">
         <div class="achievement-badge-group">
@@ -1221,7 +1232,7 @@
       Kalau kamu ingin berdiskusi tentang persiapan kompetisi sains, saling berbagi tips belajar IPA, atau sekadar bertukar ide, silakan kirim pesan ke Instagram aku!
     </p>
     <a class="ig-banner-link" href="https://www.instagram.com/azkajuara_/" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi dan Kirim Pesan di Profil Instagram @azkajuara_">
-      <img src="akunig-azka.png" alt="Profil Instagram @azkajuara_" loading="lazy" decoding="async">
+      <img src="akunig-azka.png" alt="Profil Instagram @azkajuara_" loading="lazy" decoding="async" width="1280" height="212">
     </a>
   </div>
 </section>
@@ -1233,43 +1244,84 @@
 </footer>
 
 <script>
-  const nav = document.querySelector('.nav');
-  
-  // 1. Passive scroll listener untuk memperkuat shadow pill secara halus tanpa mengubah ukuran/posisi
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      nav.classList.add('is-scrolled');
-    } else {
-      nav.classList.remove('is-scrolled');
-    }
-  }, { passive: true });
+// Definisi variabel
+const nav = document.querySelector('.nav');
+const sections = document.querySelectorAll('header[id], section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+let ticking = false;
+let scrollTimer;
 
-  // Animasi awal load
-  requestAnimationFrame(() => {
-    document.body.classList.add('loaded');
-    const heroPhoto = document.getElementById('hero-photo');
-    if (heroPhoto) heroPhoto.classList.add('is-revealed');
+// Fungsi utama yang dipanggil tiap frame
+function onScroll() {
+  // 1. Update navbar state
+  if (window.scrollY > 40) {
+    nav.classList.add('is-scrolled');
+  } else {
+    nav.classList.remove('is-scrolled');
+  }
+
+  // 2. Update active section (aria-current)
+  let currentId = '';
+  const scrollPos = window.scrollY + 140;
+  sections.forEach((sec) => {
+    if (scrollPos >= sec.offsetTop) {
+      currentId = sec.getAttribute('id');
+    }
+  });
+  navLinks.forEach((link) => {
+    if (link.getAttribute('href') === `#${currentId}`) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
   });
 
-  // IntersectionObserver untuk scroll reveal halus
-  const revealTargets = document.querySelectorAll(
-    '.achievement, .target-card, .rich-card, .section-head, .ig-cta'
-  );
+  ticking = false;
+}
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+// Listener tunggal dengan rAF throttling + will-change dinamis
+window.addEventListener('scroll', () => {
+  nav.style.willChange = 'max-width, padding, border-radius, transform';
+  clearTimeout(scrollTimer);
+  scrollTimer = setTimeout(() => {
+    nav.style.willChange = 'auto';
+  }, 200);
 
-    revealTargets.forEach((el) => observer.observe(el));
-  } else {
-    revealTargets.forEach((el) => el.classList.add('is-visible'));
+  if (!ticking) {
+    requestAnimationFrame(onScroll);
+    ticking = true;
   }
+}, { passive: true });
+
+// Inisialisasi awal
+onScroll();
+
+// Animasi awal load
+requestAnimationFrame(() => {
+  document.body.classList.add('loaded');
+  const heroPhoto = document.getElementById('hero-photo');
+  if (heroPhoto) heroPhoto.classList.add('is-revealed');
+});
+
+// IntersectionObserver untuk scroll reveal
+const revealTargets = document.querySelectorAll(
+  '.achievement, .target-card, .rich-card, .section-head, .ig-cta'
+);
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+  revealTargets.forEach((el) => observer.observe(el));
+} else {
+  revealTargets.forEach((el) => el.classList.add('is-visible'));
+}
 </script>
 
 </body>
