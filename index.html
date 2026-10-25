@@ -579,7 +579,8 @@
     .is-national :focus-visible { outline-color: #F6DB98; }
 
     @media (max-width: 768px) {
-      .achievement.is-national {
+      .achievement.is-national,
+      .achievement.is-national.reverse {
         grid-template-columns: minmax(0, 1fr);
         padding: 60px 20px 32px;
       }
@@ -1136,7 +1137,7 @@
   </div>
 </header>
 
-<!-- 4. RIWAYAT PRESTASI DENGAN HIERARKI TINGKATAN (PROVINSI, KOTA, KECAMATAN, SEKOLAH) -->
+<!-- 4. RIWAYAT PRESTASI DENGAN HIERARKI TINGKATAN (NASIONAL, PROVINSI, KOTA, KECAMATAN, SEKOLAH) -->
 <section class="section" id="prestasi">
   <div class="section-head">
     <div class="section-head-flex">
@@ -1149,7 +1150,7 @@
 
   <div class="achievement-list">
     <!-- PRESTASI TERTINGGI: Tingkat Nasional — Finalis National Round KSR 2026 -->
-    <article class="achievement is-major is-national">
+    <article class="achievement reverse is-major is-national">
       <div class="national-ribbon">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         Prestasi Tertinggi
