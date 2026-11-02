@@ -48,6 +48,7 @@
     "award": [
       "Finalis National Round Kompetisi Sains Ruangguru 2026 (Bidang IPA, Jenjang SD/Sederajat)",
       "Juara 1 Brilliant Kids Science IPA se-Jawa Timur",
+      "Predikat A+ (Sangat Memuaskan) Bidang IPA SD — EDUCOM 3.0 Tingkat Provinsi Regional 3 (2026)",
       "Juara 1 Regu Pramuka Penggalang Terbaik Se-Kota Malang 2025",
       "Lolos OSN Tingkat Kabupaten ke Provinsi 2026",
       "Finalis FLS3N Menulis Cerpen"
@@ -589,6 +590,155 @@
       .national-fact-value { font-size: 18px; }
     }
 
+    /* TIER PROVINSI — kartu sertifikat EDUCOM 3.0 (predikat A+) */
+    .achievement.is-provinsi {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(90% 70% at 100% 0%, rgba(217, 164, 65, 0.16) 0%, rgba(217, 164, 65, 0) 60%),
+        linear-gradient(150deg, #FFFFFF 0%, #FBF5E6 100%);
+      border: 1px solid rgba(217, 164, 65, 0.55);
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 52px rgba(150, 103, 24, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      padding: 64px 40px 44px;
+      margin: 0 0 24px;
+    }
+
+    .provinsi-ribbon {
+      position: absolute;
+      top: 0;
+      left: 40px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
+      color: var(--white);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 9px 14px 10px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 6px 16px rgba(10, 93, 92, 0.28);
+    }
+
+    .is-provinsi .achievement-photo,
+    .is-provinsi .achievement-text { position: relative; z-index: 1; }
+
+    /* Bayangan lewat filter pada wrapper agar tidak terpotong clip-path animasi */
+    .is-provinsi .achievement-photo {
+      filter: drop-shadow(0 18px 26px rgba(18, 36, 43, 0.22));
+    }
+
+    /* Sertifikat portrait: rasio asli dari atribut width/height, tampil utuh tanpa crop */
+    .achievement-photo img.img-educom {
+      aspect-ratio: auto;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .grade-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 26px 0 0;
+    }
+
+    .grade-seal {
+      flex: 0 0 auto;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1;
+      color: #3A2705;
+      background: linear-gradient(135deg, #F6DB98 0%, #D9A441 100%);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 0 4px rgba(217, 164, 65, 0.22), 0 10px 22px rgba(217, 164, 65, 0.38);
+    }
+
+    .grade-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+
+    .grade-value {
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--gold-deep);
+      margin-top: 2px;
+    }
+
+    .provinsi-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px 28px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      max-width: 48ch;
+    }
+
+    .provinsi-fact-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+
+    .provinsi-fact-value {
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-top: 2px;
+    }
+
+    .cert-meta {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 22px;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--ink-muted);
+      max-width: 52ch;
+      overflow-wrap: anywhere;
+    }
+
+    .cert-meta svg { flex: 0 0 auto; margin-top: 3px; color: var(--teal); }
+    .cert-meta strong { color: var(--ink-soft); font-weight: 600; }
+    .cert-meta .nowrap { white-space: nowrap; }
+
+    @media (max-width: 768px) {
+      .achievement.is-provinsi,
+      .achievement.is-provinsi.reverse {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 60px 20px 32px;
+      }
+      .provinsi-ribbon { left: 20px; }
+      .provinsi-facts { grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+      .provinsi-fact-value { font-size: 18px; }
+      .grade-seal { width: 68px; height: 68px; font-size: 28px; }
+      .grade-value { font-size: 21px; }
+    }
+
     .achievement-text h3 {
       font-size: clamp(22px, 2.5vw, 26px);
       font-weight: 600;
@@ -1036,6 +1186,9 @@
     .achievement.is-visible .achievement-text .achievement-badge-group { transition-delay: 0.18s; }
     .achievement.is-visible .achievement-text h3 { transition-delay: 0.26s; }
     .achievement.is-visible .achievement-text p { transition-delay: 0.34s; }
+    .achievement.is-visible .achievement-text .grade-row { transition-delay: 0.42s; }
+    .achievement.is-visible .achievement-text .provinsi-facts { transition-delay: 0.5s; }
+    .achievement.is-visible .achievement-text .cert-meta { transition-delay: 0.58s; }
 
     .target-card, .rich-card, .section-head {
       transition: opacity 0.5s ease, transform 0.5s ease;
@@ -1149,6 +1302,58 @@
   </div>
 
   <div class="achievement-list">
+    <!-- PRESTASI: Tingkat Provinsi — Predikat A+ (Sangat Memuaskan) IPA SD, EDUCOM 3.0 Regional 3 -->
+    <article class="achievement is-provinsi">
+      <div class="provinsi-ribbon">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        Predikat A+
+      </div>
+      <div class="achievement-photo">
+        <img src="sertifikat-educom.png" class="img-educom" alt="Sertifikat Kepesertaan Intelligent Education Competition 3.0 (EDUCOM) Intermediate Level tingkat Provinsi Regional 3 bidang IPA SD dengan predikat nilai A+ Sangat Memuaskan atas nama Ibrahimovic Azka Hafidz Alfik" loading="lazy" decoding="async" width="719" height="1027">
+      </div>
+      <div class="achievement-text">
+        <div class="achievement-badge-group">
+          <span class="tier-badge tier-gold">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Tingkat Provinsi • Regional 3
+          </span>
+          <span class="tier-badge tier-neutral">Sains (IPA) SD</span>
+          <span class="tier-badge tier-neutral">EDUCOM 3.0</span>
+        </div>
+        <h3>Predikat A+ (Sangat Memuaskan) Bidang IPA SD di EDUCOM 3.0</h3>
+        <p>Aku mengikuti Intelligent Education Competition 3.0 (EDUCOM) Intermediate Level tingkat Provinsi – Regional 3 yang diselenggarakan PT Kompetisi Nasional Prestasi Nusantara, dan meraih predikat nilai A+ dengan kategori Sangat Memuaskan di bidang IPA SD. Sertifikat diterbitkan di Sidoarjo pada 14 Oktober 2026.</p>
+        <div class="grade-row">
+          <div class="grade-seal" aria-hidden="true">A+</div>
+          <div>
+            <div class="grade-label">Predikat Nilai</div>
+            <div class="grade-value">Sangat Memuaskan</div>
+          </div>
+        </div>
+        <div class="provinsi-facts">
+          <div>
+            <div class="provinsi-fact-label">Tingkat</div>
+            <div class="provinsi-fact-value">Provinsi • Regional 3</div>
+          </div>
+          <div>
+            <div class="provinsi-fact-label">Bidang</div>
+            <div class="provinsi-fact-value">IPA SD</div>
+          </div>
+          <div>
+            <div class="provinsi-fact-label">Jenjang</div>
+            <div class="provinsi-fact-value">Intermediate Level</div>
+          </div>
+          <div>
+            <div class="provinsi-fact-label">Pelaksanaan</div>
+            <div class="provinsi-fact-value">11 Oktober 2026</div>
+          </div>
+        </div>
+        <div class="cert-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <span><strong>No. Sertifikat</strong> <span class="nowrap">2026/KNPN/SP-24/03.09.1857</span> • <strong>Kode</strong> <span class="nowrap">EDCM-2026-VM826962S</span></span>
+        </div>
+      </div>
+    </article>
+
     <!-- PRESTASI TERTINGGI: Tingkat Nasional — Finalis National Round KSR 2026 -->
     <article class="achievement reverse is-major is-national">
       <div class="national-ribbon">
