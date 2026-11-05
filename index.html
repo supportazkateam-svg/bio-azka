@@ -600,14 +600,16 @@
       border: 1px solid rgba(217, 164, 65, 0.55);
       border-radius: var(--radius-md);
       box-shadow: 0 20px 52px rgba(150, 103, 24, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-      padding: 64px 40px 44px;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 56px 36px 36px;
       margin: 0 0 24px;
     }
 
     .provinsi-ribbon {
       position: absolute;
       top: 0;
-      left: 40px;
+      left: 36px;
       z-index: 2;
       display: inline-flex;
       align-items: center;
@@ -646,19 +648,19 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      margin: 26px 0 0;
+      margin: 20px 0 0;
     }
 
     .grade-seal {
       flex: 0 0 auto;
-      width: 76px;
-      height: 76px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       font-family: 'Zilla Slab', Georgia, serif;
       font-weight: 700;
-      font-size: 32px;
+      font-size: 27px;
       line-height: 1;
       color: #3A2705;
       background: linear-gradient(135deg, #F6DB98 0%, #D9A441 100%);
@@ -676,7 +678,7 @@
 
     .grade-value {
       font-family: 'Zilla Slab', Georgia, serif;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
       line-height: 1.2;
       color: var(--gold-deep);
@@ -687,8 +689,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 16px 28px;
-      margin-top: 24px;
-      padding-top: 20px;
+      margin-top: 18px;
+      padding-top: 16px;
       border-top: 1px solid var(--line);
       max-width: 48ch;
     }
@@ -703,7 +705,7 @@
 
     .provinsi-fact-value {
       font-family: 'Zilla Slab', Georgia, serif;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       line-height: 1.25;
       color: var(--ink);
@@ -714,8 +716,8 @@
       display: flex;
       align-items: flex-start;
       gap: 8px;
-      margin-top: 22px;
-      font-size: 13.5px;
+      margin-top: 16px;
+      font-size: 13px;
       line-height: 1.5;
       color: var(--ink-muted);
       max-width: 52ch;
@@ -734,9 +736,8 @@
       }
       .provinsi-ribbon { left: 20px; }
       .provinsi-facts { grid-template-columns: 1fr 1fr; gap: 16px 20px; }
-      .provinsi-fact-value { font-size: 18px; }
-      .grade-seal { width: 68px; height: 68px; font-size: 28px; }
-      .grade-value { font-size: 21px; }
+      .provinsi-fact-value { font-size: 17px; }
+      .grade-value { font-size: 20px; }
     }
 
     .achievement-text h3 {
@@ -1318,10 +1319,9 @@
             Tingkat Provinsi • Regional 3
           </span>
           <span class="tier-badge tier-neutral">Sains (IPA) SD</span>
-          <span class="tier-badge tier-neutral">EDUCOM 3.0</span>
         </div>
         <h3>Predikat A+ (Sangat Memuaskan) Bidang IPA SD di EDUCOM 3.0</h3>
-        <p>Aku mengikuti Intelligent Education Competition 3.0 (EDUCOM) Intermediate Level tingkat Provinsi – Regional 3 yang diselenggarakan PT Kompetisi Nasional Prestasi Nusantara, dan meraih predikat nilai A+ dengan kategori Sangat Memuaskan di bidang IPA SD. Sertifikat diterbitkan di Sidoarjo pada 14 Oktober 2026.</p>
+        <p>Aku mengikuti Intelligent Education Competition 3.0 (EDUCOM) Intermediate Level tingkat Provinsi – Regional 3 dari PT Kompetisi Nasional Prestasi Nusantara, dan meraih predikat nilai A+ (Sangat Memuaskan) di bidang IPA SD.</p>
         <div class="grade-row">
           <div class="grade-seal" aria-hidden="true">A+</div>
           <div>
@@ -1330,14 +1330,6 @@
           </div>
         </div>
         <div class="provinsi-facts">
-          <div>
-            <div class="provinsi-fact-label">Tingkat</div>
-            <div class="provinsi-fact-value">Provinsi • Regional 3</div>
-          </div>
-          <div>
-            <div class="provinsi-fact-label">Bidang</div>
-            <div class="provinsi-fact-value">IPA SD</div>
-          </div>
           <div>
             <div class="provinsi-fact-label">Jenjang</div>
             <div class="provinsi-fact-value">Intermediate Level</div>
